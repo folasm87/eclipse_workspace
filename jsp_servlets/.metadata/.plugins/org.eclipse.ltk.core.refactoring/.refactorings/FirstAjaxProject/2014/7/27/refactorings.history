@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;AjaxAssignment/src/net.mv.dao&apos;&#x0D;&#x0A;- Original project: &apos;FirstAjaxProject&apos;&#x0D;&#x0A;- Destination element: &apos;AjaxAssignment/src/net.mv.dao&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     net.mv.dao.ConnectionFactory.java&#x0D;&#x0A;     database.properties" description="Copy elements" destination="=AjaxAssignment/src&lt;net.mv.dao" element1="src/net/mv/dao/database.properties" element2="/src&lt;net.mv.dao{ConnectionFactory.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1404415618882" units="1" version="1.0"/>
+</session>

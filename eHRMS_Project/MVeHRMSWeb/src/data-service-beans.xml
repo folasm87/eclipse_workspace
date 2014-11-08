@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<context:component-scan base-package="com.multivision.ehrms.service.data"/>
+	<!-- <bean id="userDS" class="com.multivision.ehrms.service.data.UserDataService" />
+	<bean id="systemRoleDS"
+		class="com.multivision.ehrms.service.data.SystemRoleDataService" />
+	<bean id="employeeDS" class="com.multivision.ehrms.service.data.EmployeeDataService" />
+	<bean id="projectDS" class="com.multivision.ehrms.service.data.ProjectDataService" />
+	<bean id="employeeProjectMappingDS"
+		class="com.multivision.ehrms.service.data.EmployeeProjectMappingDataService" />
+	<bean id="leaveRequestDS"
+		class="com.multivision.ehrms.service.data.LeaveRequestDataService" />
+	<bean id="requirementDS"
+		class="com.multivision.ehrms.service.data.RequirementDataService" />
+	<bean id="applicantDS" class="com.multivision.ehrms.service.data.ApplicantDataService" />
+	<bean id="employeeShiftDS"
+		class="com.multivision.ehrms.service.data.EmployeeShiftTimeDataService" />
+	<bean id="menuDS" class="com.multivision.ehrms.service.data.MenuDataService" /> -->
+</beans>

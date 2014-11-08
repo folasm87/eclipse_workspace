@@ -1,0 +1,97 @@
+package net.mv.dao;
+
+import javax.persistence.*;
+import java.util.Set;
+import java.util.HashSet;
+
+@Entity
+public class Account {
+	@Id
+	@GeneratedValue
+	@Column(name="acct_no")
+	private long acctNo;
+	
+	@Column
+	private String holder;
+	private double balance;
+	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="acnt_no")
+	private Set<Transaction> transactions;
+	
+	
+	public Account(){
+		//default contructor since we're creating an overloaded one
+	}
+	
+	public Account(String holder, double balance){
+		super();
+		this.holder = holder;
+		this.balance = balance;
+		
+		Transaction txn = new Transaction("Open Balance", balance, getBalance());
+		
+		
+		txn.setAcnt(this);
+		
+		transactions = new HashSet<Transaction>();
+		getTransactions().add(txn);
+		
+	}
+	
+	public void deposit(double amount){
+		this.balance += amount;
+		Transaction txn = new Transaction("Credit", amount, balance);
+		txn.setAcnt(this);
+		getTransactions().add(txn);
+	}
+	
+	
+	public void withdraw(double amount) throws Exception{
+		
+		if(amount <= getBalance()){
+			this.balance =  getBalance() - amount;
+			Transaction txn  = new Transaction("Debit", amount, balance);
+			txn.setAcnt(this);
+			getTransactions().add(txn);
+		}else{
+			throw new Exception("Insufficient funds!");
+		}
+		
+	}
+
+	public long getAcctNo() {
+		return acctNO;
+	}
+
+	public void setAcctNo(long acctNo) {
+		this.acctNO = acctNo;
+	}
+
+	public String getHolder() {
+		return holder;
+	}
+
+	public void setHolder(String holder) {
+		this.holder = holder;
+	}
+
+	public Set<Transaction> getTransactions() {
+		return transactions;
+	}
+
+	public void setTransactions(Set<Transaction> transactions) {
+		this.transactions = transactions;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	
+	
+	
+}

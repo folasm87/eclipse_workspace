@@ -1,0 +1,26 @@
+package app;
+
+import java.util.Properties;
+
+import javax.naming.Context;
+
+public class Test {
+
+	public static void main(String[] args) {
+		try{
+			
+			Properties props = new Properties();
+			
+			props.put(Context.INITIAL_CONTEXT_FACTORY, "weblogic.jndi.WLInitialContextFactory");
+			
+			props.put(Context.PROVIDER_URL, "t3://localhost:7001");
+			
+			
+		}catch(Exception e){
+			
+			e.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,0 +1,4 @@
+C\:/eclipse_workspace/ejb/FirstWSProjectClientEAR/EarContent/APP-INF/classes = APP-INF/classes
+C\:/eclipse_workspace/ejb/FirstWSProjectClient/WebContent = FirstWSProjectClient.war
+C\:/eclipse_workspace/ejb/.metadata/.plugins/org.eclipse.core.resources/FirstWSProjectClient/build/weboutput = FirstWSProjectClient.war
+C\:/eclipse_workspace/ejb/FirstWSProjectClient/build/classes = FirstWSProjectClient.war/WEB-INF/classes

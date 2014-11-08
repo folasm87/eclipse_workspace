@@ -1,0 +1,5 @@
+package net.mv.dao;
+import javax.persistence.*;
+public class Contract {
+
+}

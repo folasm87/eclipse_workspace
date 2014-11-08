@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.multivision.ehrms.business.Project" table="Projects">
+		<id name="id">
+			<column name="ID"></column>
+			<generator class="native" />
+		</id>
+		<property name="projectId" column="proj_id" type="string" />
+		<property name="name" column="name" type="string" />
+		<property name="customer" column="customer" type="string" />
+		<property name="technologies" column="technologies" type="string" />
+		<property name="contractRefNo" column="contract_ref_no" type="string" />
+		<property name="estimatedHours" column="estimated_hours"
+			type="string" />
+		<property name="estimatedCost" column="estimated_cost" type="double" />
+		<many-to-one name="projectCoordinator" column="project_coordinator"
+			class="com.multivision.ehrms.business.Employee" fetch="join" />
+		<many-to-one name="projectManager" column="project_manager"
+			class="com.multivision.ehrms.business.Employee" fetch="join" />
+		
+		<set name="tasks" table="tasks" 
+				inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ID" not-null="true" />
+            </key>
+            <one-to-many class="com.multivision.ehrms.business.Task" />
+        </set>
+        
+        <set name="resources" table="resources" 
+				inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ID" not-null="true" />
+            </key>
+            <one-to-many class="com.multivision.ehrms.business.Resource" />
+        </set>
+		
+		<property name="remarks" column="remarks" type="string" />
+		<property name="startDate" column="start_date" type="string" />
+		<property name="endDate" column="end_date" type="string" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+package com.multivision.ehrms.service.data;
+
+import java.util.List;
+
+
+
+
+import com.multivision.ehrms.business.Project;
+import com.multivision.ehrms.business.Task;
+import com.multivision.ehrms.service.data.interfaces.ITaskDataService;
+
+public class TaskDataService extends BaseDataService implements ITaskDataService {
+
+	@Override
+	public List<Task> getTask() throws Exception {
+		return getDataRetriever().retrieveAllRecords(new Task());
+	}
+
+	@Override
+	public void saveTask(Task task) throws Exception {
+		getDataModifier().updateRecord(task);
+	}
+
+	@Override
+	public Task getTask(Long Id) throws Exception {
+		return (Task) getDataRetriever().retrieveByKey(new Task(),
+				Id.toString());
+	}
+
+}

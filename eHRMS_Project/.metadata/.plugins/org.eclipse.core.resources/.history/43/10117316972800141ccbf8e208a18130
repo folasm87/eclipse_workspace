@@ -1,0 +1,28 @@
+package net.mv.dao;
+import java.util.Set;
+
+import javax.persistence.*;
+
+@Entity
+public class Resource {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="ID")
+	private long ID;
+	
+	@Column(name="RESOURCE_ID")
+	private String resource_id;
+	
+	
+	@Column
+	private String name;
+	private double cost;
+	
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="project", referencedColumnName="id")
+	private Project project = new Project();
+	
+	
+
+}

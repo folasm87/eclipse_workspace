@@ -1,0 +1,32 @@
+package com.eintern.mailer;
+
+import java.util.Properties;
+
+import javax.mail.Session;
+
+public class SendMail {
+
+	public static void main(String[] args) {
+		final String host = "smtp.gmail.com";
+		//final String host = "smtp.mail.yahoo.com";
+		final String port = "587";
+		//final String port = "25";
+		final String from = "<your email here>";
+		final String pwd = "<your password here>";
+		final String to = "rick@multivision.net";
+		
+		Properties props = System.getProperties();
+		props.setProperty("mail.smtp.host", host);
+		props.put("mail.smtp.auth", "true" );
+		props.put("mail.smtp.port", port);
+		props.put("mail.smtp.starttls.enable", "true");
+		
+		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator(){
+			protected PasswordAuthentication getPasswordAuthentication(){
+				return new PasswordAuthentication(from, pwd);
+			}
+		});
+
+	}
+
+}

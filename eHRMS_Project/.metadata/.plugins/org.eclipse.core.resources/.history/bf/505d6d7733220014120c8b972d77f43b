@@ -1,0 +1,127 @@
+package com.multivision.ehrms.action.form;
+
+
+
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.validator.ValidatorForm;
+
+import com.multivision.ehrms.business.Project;
+
+public class TaskForm extends ValidatorForm{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
+
+	private long id;
+	
+	private String taskId;
+	
+	
+	
+	private String name;
+	
+	
+	private String duration;
+	
+	
+	
+	private Project project;
+
+
+	public long getId() {
+		return id;
+	}
+
+
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+
+	public String getTaskId() {
+		return taskId;
+	}
+
+
+
+	public void setTaskId(String taskId) {
+		this.taskId = taskId;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public String getDuration() {
+		return duration;
+	}
+
+
+
+	public void setDuration(String duration) {
+		this.duration = duration;
+	}
+
+
+
+	public Project getProject() {
+		return project;
+	}
+
+
+
+	public void setProject(Project project) {
+		this.project = project;
+	}
+	
+	public void reset(ActionMapping mapping, ServletRequest request) {
+
+	}
+
+	public ActionErrors validate(ActionMapping mapping,
+			HttpServletRequest request) {
+		ActionErrors errors = new ActionErrors();
+		ActionMessage message;
+		if (this.taskId == null || this.taskId.trim().length() == 0) {
+			message = new ActionMessage("task.id.mandatory");
+			errors.add("taskid", message);
+		}
+		if (this.name == null || this.name.trim().length() == 0) {
+			message = new ActionMessage("employee.name.mandatory");
+			errors.add("name", message);
+		}
+		if (this.dob == null || this.dob.trim().length() == 0) {
+			message = new ActionMessage("employee.dob.mandatory");
+			errors.add("dob", message);
+		}
+		if (this.joinDate == null || this.joinDate.trim().length() == 0) {
+			message = new ActionMessage("employee.joindate.mandatory");
+			errors.add("joinDate", message);
+		}
+		return errors;
+	}
+	
+	
+	
+}

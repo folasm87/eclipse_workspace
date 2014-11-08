@@ -1,0 +1,17 @@
+package net.mv.dao;
+
+import org.hibernate.Session;
+
+public class DAO {
+	
+	public static void insertUser(){
+		
+		
+	}
+	
+	
+	public static void logHours(){
+		
+		
+	}
+}

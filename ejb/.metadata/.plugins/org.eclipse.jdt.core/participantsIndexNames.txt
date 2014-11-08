@@ -1,0 +1,19 @@
+INDEX VERSION 1.126
+C:\eclipse_workspace\ejb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3882700191.index
+\EJBStrutsShopping\src
+C:\eclipse_workspace\ejb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3494855230.index
+\RESTfulWebClient\src
+C:\eclipse_workspace\ejb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3721104386.index
+\EJBStrutsShopping\src
+C:\eclipse_workspace\ejb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3972374977.index
+\EJBStruts\src
+C:\eclipse_workspace\ejb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2720778185.index
+\EJBStruts\src
+C:\eclipse_workspace\ejb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3576205531.index
+\RESTfulWebClient\src
+C:\eclipse_workspace\ejb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1481607675.index
+\FirstWSProjectClient\src
+C:\eclipse_workspace\ejb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\335666002.index
+\RESTfulWebClient\src
+C:\eclipse_workspace\ejb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\90876626.index
+\EJBStrutsShopping\src

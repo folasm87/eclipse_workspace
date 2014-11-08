@@ -1,0 +1,74 @@
+package com.multivision.ehrms.business;
+
+import java.io.Serializable;
+
+import javax.persistence.*;
+
+
+@Entity
+@Table(name="Tasks")
+public class Task implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
+	@Id
+	@GeneratedValue
+	@Column(name="task_id")
+	private long taskId;
+	
+	
+	@Column
+	private String name;
+	
+	@Column
+	private String duration;
+	
+	
+	@ManyToOne
+	@JoinColumn(name="project", referencedColumnName="id")
+	private Project project;
+
+
+	public long getTaskId() {
+		return taskId;
+	}
+
+	public void setTaskId(long taskId) {
+		this.taskId = taskId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDuration() {
+		return duration;
+	}
+
+	public void setDuration(String duration) {
+		this.duration = duration;
+	}
+
+	public Project getProject() {
+		return project;
+	}
+
+	public void setProject(Project project) {
+		this.project = project;
+	}
+
+
+	
+	
+	
+	
+	
+}

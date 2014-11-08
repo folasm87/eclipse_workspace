@@ -1,0 +1,27 @@
+package net.mv.client;
+
+import java.util.Properties;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+public class ProcessClient {
+
+	public static void main(String[] args) throws NamingException {
+		// TODO Auto-generated method stub
+		
+		Properties env = new Properties();
+
+		env.put(Context.INITIAL_CONTEXT_FACTORY, "weblogic.jndi.WLInitialContextFactory");
+		env.put(Context.PROVIDER_URL, "t3://localhost:7001");
+		Context envCtx = new InitialContext(env);
+		
+		Process ip =  (Process) envCtx.lookup("java:global/ProcessBean/process!net.mv.process.Process");
+		//Process ip =  (ProcessBean) envCtx.lookup("process#net.mv.process.Process");
+		
+		ip.someProcess();
+
+	}
+
+}

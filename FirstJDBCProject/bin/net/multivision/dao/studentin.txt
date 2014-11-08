@@ -1,0 +1,6 @@
+student
+studid:varchar:25:studname:varchar:25:dob:varchar:25:fees:float:10
+1:john:1/1/1980:500.50
+2:adam:2/2/1981:299.00
+3:christie:3/3/1982:750.25
+4:mandy:4/4/1983:1200.00

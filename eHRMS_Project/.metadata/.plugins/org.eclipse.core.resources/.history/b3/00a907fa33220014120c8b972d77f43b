@@ -1,0 +1,28 @@
+package com.multivision.ehrms.action.form;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.validator.ValidatorForm;
+
+import com.multivision.ehrms.business.Project;
+
+public class ResourceForm {
+	
+	
+	private static final long serialVersionUID = 1L;
+
+	private long id;
+	
+	private String taskId;
+	
+	private String name;
+	
+	private double cost;
+	
+	private Project project;
+
+}

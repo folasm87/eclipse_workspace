@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/CalculatorWSDLFile/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CalculatorWSDLFile" targetNamespace="http://www.example.org/CalculatorWSDLFile/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.example.org/CalculatorWSDLFile/">
+      <xsd:element name="add">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="first" type="xsd:int" />
+          	<xsd:element name="second" type="xsd:int"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="addRequest">
+    <wsdl:part element="tns:add" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="addResponse">
+    <wsdl:part element="tns:addResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="CalculatorWSDLFile">
+    <wsdl:operation name="add">
+      <wsdl:input message="tns:addRequest"/>
+      <wsdl:output message="tns:addResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalculatorWSDLFileSOAP" type="tns:CalculatorWSDLFile">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="add">
+      <soap:operation soapAction="http://www.example.org/CalculatorWSDLFile/add"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculatorWSDLFile">
+    <wsdl:port binding="tns:CalculatorWSDLFileSOAP" name="CalculatorWSDLFileSOAP">
+      <soap:address location="localhost:7001/ContractFirstTopDown/calculatorService?"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

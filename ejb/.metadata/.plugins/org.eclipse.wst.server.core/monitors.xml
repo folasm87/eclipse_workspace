@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<monitors>
+  <monitor contentTypes="Web services" port="14341" portId="http" serverId="Oracle WebLogic Server 12c (12.1.2) at localhost [mydomain]" started="true"/>
+</monitors>

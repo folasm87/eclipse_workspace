@@ -1,0 +1,9 @@
+C\:/eclipse_workspace/struts/StrutsDynaValidationProject/WebContent = StrutsDynaValidationProject.war
+C\:/eclipse_workspace/struts/.metadata/.plugins/org.eclipse.core.resources/StrutsDynaValidationProject/build/weboutput = StrutsDynaValidationProject.war
+C\:/eclipse_workspace/struts/StrutsDynaValidationProject/build/classes = StrutsDynaValidationProject.war/WEB-INF/classes
+C\:/eclipse_workspace/struts/StrutsWithTiles/WebContent = StrutsWithTiles.war
+C\:/eclipse_workspace/struts/.metadata/.plugins/org.eclipse.core.resources/StrutsWithTiles/build/weboutput = StrutsWithTiles.war
+C\:/eclipse_workspace/struts/StrutsWithTiles/build/classes = StrutsWithTiles.war/WEB-INF/classes
+C\:/eclipse_workspace/struts/DispatchActionProject/WebContent = DispatchActionProject.war
+C\:/eclipse_workspace/struts/.metadata/.plugins/org.eclipse.core.resources/DispatchActionProject/build/weboutput = DispatchActionProject.war
+C\:/eclipse_workspace/struts/DispatchActionProject/build/classes = DispatchActionProject.war/WEB-INF/classes

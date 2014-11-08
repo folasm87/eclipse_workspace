@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;net.mv.shopping&apos; to &apos;ShoppingCartEJB/ejbModule&apos;&#x0D;&#x0A;- Original project: &apos;ShoppingCart&apos;&#x0D;&#x0A;- Destination element: &apos;ShoppingCartEJB/ejbModule&apos;&#x0D;&#x0A;- Original element: &apos;ShoppingCart/ejbModule/net.mv.shopping&apos;" description="Copy package" destination="=ShoppingCartEJB/ejbModule" element1="/ejbModule&lt;net.mv.shopping" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1406606107635" version="1.0"/>
+</session>

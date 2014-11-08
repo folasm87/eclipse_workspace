@@ -1,0 +1,38 @@
+package net.mv.dao;
+
+import java.util.Set;
+
+import javax.persistence.*;
+
+@Entity
+public class User {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="ID")
+	private long ID;
+	
+	@Column(name="USER_ID")
+	private String user_id;
+	
+	
+	@Column
+	private String name;
+	private String password;
+	private String role;
+	private String email;
+	private String phone;
+	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="ID")
+	private Set<Project> projects;
+	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="ID")
+	private Set<Contract> contracts;
+	
+	
+	
+	
+
+}

@@ -1,0 +1,7 @@
+package com.multivision.ehrms.service.business;
+
+import com.multivision.ehrms.service.business.interfaces.IResourceBusinessService;
+
+public class ResourceBusinessService implements IResourceBusinessService{
+
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert Student Data</title>
+<h2>Insert Student Data</h2>
+</head>
+<body>
+	<h4>Login Here</h4>
+	<form action="/HTMLProject2/loginSubmit" method="post">
+		<table border="3">
+			<tr>
+				<td>Student ID:</td>
+				<td><input type="text" name="studid" /></td>
+			</tr>
+			
+			<tr>
+				<td>Student Name:</td>
+				<td><input type="text" name="studname" /></td>
+			</tr>
+			
+			<tr>
+				<td>Username:</td>
+				<td><input type="text" name="username" /></td>
+			</tr>
+
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="password" /></td>
+			</tr>
+
+			<tr>
+				<td><input type="submit" value="login"></td>
+				<td><input type="reset" value="clear"></td>
+			</tr>
+
+
+		</table>
+	</form>
+</body>
+</html>

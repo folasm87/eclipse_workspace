@@ -1,0 +1,5 @@
+package net.mv.actions;
+
+public class LookupAction extends Action{
+
+}

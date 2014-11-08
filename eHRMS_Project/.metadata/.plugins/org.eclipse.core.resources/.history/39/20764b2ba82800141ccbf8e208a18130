@@ -1,0 +1,47 @@
+package net.mv.dao;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+public class DAO {
+	
+	public static void insertUser(String username, String password,
+			String fname, String lname, String role, String email, String phone) {
+		
+/*		private String username;
+		private String password;
+		private String fname;
+		private String lname;
+		private String role;
+		private String email;
+		private String phone;*/
+
+		Session session = null;
+
+		try {
+			session = HibernateUtility.getSessionFactory().openSession();
+			System.out.println(username + ": " + fname + " " + lname);
+			Transaction tx = session.beginTransaction();
+			User user = new User();
+
+			user.setUsername(username);
+			user.setPassword(password);
+			
+			
+			System.out.println(user);
+
+			session.saveOrUpdate(user);
+			//session.flush();
+			tx.commit();
+			//session.close();
+
+			// return true;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			// return false;
+		}
+	}
+
+}

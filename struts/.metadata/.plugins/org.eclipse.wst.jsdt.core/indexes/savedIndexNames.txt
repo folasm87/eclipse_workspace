@@ -1,0 +1,10 @@
+INDEX VERSION 1.3+C:\eclipse_workspace\struts\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3837948079.index
+2370900057.index
+2046191017.index
+2042701234.index
+3039236416.index
+2455164244.index
+2112120908.index
+2244897286.index
+1138398968.index

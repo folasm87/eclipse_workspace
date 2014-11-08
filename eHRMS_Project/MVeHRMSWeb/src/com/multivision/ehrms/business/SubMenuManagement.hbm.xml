@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.multivision.ehrms.business.SubMenuManagement"
+		table="Seed_Sub_Menu_Management">
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="parentid" column="parent_id"
+			class="com.multivision.ehrms.business.ParentMenuManagement" not-null="true"
+			fetch="join" />
+		<property name="name" column="sname"></property>
+
+	</class>
+</hibernate-mapping>

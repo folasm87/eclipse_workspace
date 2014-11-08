@@ -1,0 +1,35 @@
+package net.mv.dao;
+
+import javax.persistence.*;
+
+//tell the compiler that this can be persisted
+@Entity 
+public class User {
+	/*
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="STUD_ID")
+	private long sid;
+	
+	*/
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="USER_ID")
+	private long USER_ID;
+	@Column(name="USERNAME")
+	private String USERNAME;
+	@Column(name="PASSWORD")
+	private String PASSWORD;
+	@Column(name="NAME")
+	private String NAME;
+	@Column(name="HOURS")
+	private double HOURS;
+
+	
+	
+
+	
+	
+
+}

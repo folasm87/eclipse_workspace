@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+	<definition name=".homePageLayout" path="/pages/common/layouts/homePageLayout.jsp">
+		<put name="header" value="/pages/common/header.jsp" />
+		<put name="menu" value="/pages/common/menu.jsp" />
+		<put name="footer" value="/pages/common/footer.jsp" />
+		<put name="body" value="/pages/homePage.jsp" />
+	</definition>
+	<definition name=".systemRoles" extends=".homePageLayout">
+		<put name="body" value="/pages/systemRoles.jsp" />
+	</definition>
+	<definition name=".employees" extends=".homePageLayout">
+		<put name="body" value="/pages/employees.jsp" />
+	</definition>
+	<definition name=".addEmployees" extends=".homePageLayout">
+		<put name="body" value="/pages/addEmployees.jsp" />
+	</definition>
+	<definition name=".viewEmployees" extends=".homePageLayout">
+		<put name="body" value="/pages/viewEmployees.jsp" />
+	</definition>
+	<definition name=".deleteEmployees" extends=".homePageLayout">
+		<put name="body" value="/pages/deleteEmployees.jsp" />
+	</definition>
+	<definition name=".projects" extends=".homePageLayout">
+		<put name="body" value="/pages/projects.jsp" />
+	</definition>
+	<definition name=".addProjects" extends=".homePageLayout">
+		<put name="body" value="/pages/addProjects.jsp" />
+	</definition>
+	<definition name=".viewProjects" extends=".homePageLayout">
+		<put name="body" value="/pages/viewProjects.jsp" />
+	</definition>
+	<definition name=".tasks" extends=".homePageLayout">
+		<put name="body" value="/pages/tasks.jsp" />
+	</definition>
+	<definition name=".addTasks" extends=".homePageLayout">
+		<put name="body" value="/pages/addTasks.jsp" />
+	</definition>
+	<definition name=".viewTasks" extends=".homePageLayout">
+		<put name="body" value="/pages/viewTasks.jsp" />
+	</definition>
+	
+	<definition name=".resources" extends=".homePageLayout">
+		<put name="body" value="/pages/resources.jsp" />
+	</definition>
+	<definition name=".addResources" extends=".homePageLayout">
+		<put name="body" value="/pages/addResources.jsp" />
+	</definition>
+	<definition name=".viewResources" extends=".homePageLayout">
+		<put name="body" value="/pages/viewResources.jsp" />
+	</definition>
+	
+	<definition name=".employeeprojectmapping" extends=".homePageLayout">
+		<put name="body" value="/pages/employeeprojectmapping.jsp" />
+	</definition>
+	<definition name=".addemployeeprojectmapping" extends=".homePageLayout">
+		<put name="body" value="/pages/addemployeeprojectmapping.jsp" />
+	</definition>
+	<definition name=".viewemployeeprojectmapping" extends=".homePageLayout">
+		<put name="body" value="/pages/viewemployeeprojectmapping.jsp" />
+	</definition>
+	
+	<definition name=".addLeave" extends=".homePageLayout">
+		<put name="body" value="/pages/addLeave.jsp" />
+	</definition>
+
+	<definition name=".leave" extends=".homePageLayout">
+		<put name="body" value="/pages/leaveRequest.jsp" />
+	</definition>
+
+	<definition name=".viewLeave" extends=".homePageLayout">
+		<put name="body" value="/pages/viewLeave.jsp" />
+	</definition>
+
+	<definition name=".addLeaveApproval" extends=".homePageLayout">
+		<put name="body" value="/pages/addLeaveApproval.jsp" />
+	</definition>
+
+	<definition name=".leaveApproval" extends=".homePageLayout">
+		<put name="body" value="/pages/leaveRequestApproval.jsp" />
+	</definition>
+
+	<definition name=".viewLeaveApproval" extends=".homePageLayout">
+		<put name="body" value="/pages/viewLeaveApproval.jsp" />
+	</definition>
+
+	<definition name=".requirement" extends=".homePageLayout">
+		<put name="body" value="/pages/Requirement.jsp" />
+	</definition>
+
+	<definition name=".addRequirement" extends=".homePageLayout">
+		<put name="body" value="/pages/addRequirement.jsp" />
+	</definition>
+
+	<definition name=".viewRequirement" extends=".homePageLayout">
+		<put name="body" value="/pages/viewRequirement.jsp" />
+	</definition>
+
+
+	<definition name=".addApplicant" extends=".homePageLayout">
+		<put name="body" value="/pages/addApplicant.jsp" />
+	</definition>
+	
+	<definition name=".addApplicantSearch" extends=".homePageLayout">
+		<put name="body" value="/pages/addApplicantSearch.jsp" />
+	</definition>
+
+	<definition name=".addJobSearch" extends=".homePageLayout">
+		<put name="body" value="/pages/jobSearch.jsp" />
+	</definition>
+
+	<definition name=".employeeShift" extends=".homePageLayout">
+		<put name="body" value="/pages/employeeshift.jsp" />
+	</definition>
+
+	<definition name=".addEmployeeShift" extends=".homePageLayout">
+		<put name="body" value="/pages/addEmployeShift.jsp" />
+	</definition>
+
+	
+	<definition name=".editemployeeprojectmapping" extends=".homePageLayout">
+		<put name="body" value="/pages/editemployeeprojectmapping.jsp" />
+	</definition>
+	
+	<definition name=".addroleAccess" extends=".homePageLayout">
+		<put name="body" value="/pages/roleAccessAdd.jsp" />
+	</definition>
+	
+	<definition name=".viewEmployeeShift" extends=".homePageLayout">
+		<put name="body" value="/pages/viewEmployeShift.jsp" />
+	</definition>
+	
+	<definition name=".home" extends=".homePageLayout">
+		<put name="body" value="/pages/home.jsp" />
+	</definition>
+	
+	<definition name=".editroleAccess" extends=".homePageLayout">
+		<put name="body" value="/pages/roleAccessEdit.jsp" />
+	</definition>
+	
+	<definition name=".viewemployeeAnn" extends=".homePageLayout">
+		<put name="body" value="/pages/viewAnnEmployee.jsp" />
+	</definition>
+	
+	<definition name=".applicantView" extends=".homePageLayout">
+		<put name="body" value="/pages/applicantView.jsp" />
+	</definition>
+	
+	<definition name=".addNewItem" extends=".homePageLayout">
+		<put name="body" value="/pages/imm/addNewItem.jsp"></put>
+	</definition>
+	
+
+</tiles-definitions>

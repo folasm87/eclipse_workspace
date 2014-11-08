@@ -1,0 +1,33 @@
+package com.multivision.ehrms.service.business;
+
+import java.util.List;
+
+import com.multivision.ehrms.business.Task;
+import com.multivision.ehrms.service.business.interfaces.ITaskBusinessService;
+import com.multivision.ehrms.service.data.DataServiceFactory;
+import com.multivision.ehrms.service.data.interfaces.ITaskDataService;
+
+public class TaskBusinessService implements ITaskBusinessService {
+
+	@Override
+	public List<Task> getTask() throws Exception {
+		DataServiceFactory dsFactory = DataServiceFactory.getInstance();
+		
+		ITaskDataService taskDataService = (ITaskDataService) dsFactory.getFactory().getBean("projectDS");
+		
+		return taskDataService.getTask();
+	}
+
+	@Override
+	public void saveTask(Task task) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Task getTask(Long Id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

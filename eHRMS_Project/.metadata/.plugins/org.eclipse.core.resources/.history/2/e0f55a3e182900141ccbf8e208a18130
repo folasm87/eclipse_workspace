@@ -1,0 +1,31 @@
+package com.multivision.ehrms.service.business;
+
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.multivision.ehrms.business.Issue;
+import com.multivision.ehrms.service.business.interfaces.IIssueBusinessService;
+
+@Component("issueBS")
+public class IssueBusinessService implements IIssueBusinessService {
+
+	@Override
+	public List<Issue> getIssues() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveIssue(Issue issue) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Issue getIssue(Long Id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

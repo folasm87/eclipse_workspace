@@ -1,0 +1,10 @@
+package com.multivision.imm.business;
+
+public class InsertData {
+
+	public void createItem(String[] str) throws Exception {
+		
+		System.out.println("You have reached the business class - InsertData");
+	}
+
+}

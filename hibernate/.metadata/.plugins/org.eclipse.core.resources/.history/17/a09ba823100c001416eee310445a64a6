@@ -1,0 +1,22 @@
+package net.mv.dao;
+
+import org.hibernate.Session;
+
+public class DAO {
+	
+	public static void insertUser(){
+		
+		Session session = null;
+		
+		session = HibernateUtility.getSessionFactory().openSession();
+		//transaction?
+		long l_id = Long.parseLong(id);
+		System.out.println(l_id);
+	}
+	
+	
+	public static void logHours(){
+		
+		
+	}
+}

@@ -1,0 +1,11 @@
+package com.multivision.imm.business;
+
+public class InsertData {
+
+	public void createItem(String[] str) throws Exception {
+		
+		Item itm = new Item();
+		IItemDataService ids = ItemDataService();
+	}
+
+}

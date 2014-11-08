@@ -1,0 +1,39 @@
+package com.multivision.ehrms.action.form;
+
+import org.apache.struts.validator.ValidatorForm;
+
+import com.multivision.ehrms.business.Project;
+
+public class IssueForm extends ValidatorForm {
+
+	private static final long serialVersionUID = 1L;
+
+	private long id;
+	
+	private String issueId;
+	
+	private String issue;
+	
+	private Project project;
+	
+	private String action;
+	
+	public String getAction() {
+		return action;
+	}
+
+	public void setAction(String action) {
+		this.action = action;
+	}
+
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+	
+	
+}

@@ -1,0 +1,27 @@
+INDEX VERSION 1.126
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2577175696.index
+\StrutsSpringAnnotations\src
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\924797638.index
+\717StrutsSpringHibernateAnnotations\src
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2909888201.index
+\BulletinBoardProject\src
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4253617585.index
+\StrutsSpring\src
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1761124990.index
+\struts-blank-1.3.10\src
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1127766071.index
+\BulletinBoardProject\src
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2025640983.index
+\BulletinBoardProject\src
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\680748564.index
+\StrutsSpring\src
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\29933038.index
+\SpringMVCMinXml\src
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1216227841.index
+\StrutsSpringAnnotations\src
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3497292506.index
+\717StrutsSpringHibernateAnnotations\src
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\902758738.index
+\FirstSimpleSpringMVCProject\src
+C:\eclipse_workspace\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\302088144.index
+\struts-blank-1.3.10\src

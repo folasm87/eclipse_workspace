@@ -1,0 +1,33 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<mapping class="com.multivision.ehrms.business.SuperUser" />
+		<mapping class="com.multivision.ehrms.business.SystemRole" />
+		<mapping class="com.multivision.ehrms.business.Employee" />
+		<mapping class="com.multivision.ehrms.business.Project" />
+		<mapping class="com.multivision.ehrms.business.EmployeeProjectMapping" />
+		<mapping class="com.multivision.ehrms.business.LeaveRequest" />
+		<mapping class="com.multivision.ehrms.business.Requirement" />
+		<mapping class="com.multivision.ehrms.business.Applicant" />
+		<mapping class="com.multivision.ehrms.business.EmployeeShiftTime" />
+		<mapping class="com.multivision.ehrms.business.SubMenuManagement" />
+		<mapping class="com.multivision.ehrms.business.ParentMenuManagement" />
+		<mapping class="com.multivision.ehrms.business.RoleMenuAccess" />
+		<mapping class="com.multivision.imm.business.Item"/>
+
+<!-- 
+		<mapping resource="com/multivision/ehrms/business/SuperUser.hbm.xml" />
+		<mapping resource="com/multivision/ehrms/business/SystemRole.hbm.xml" />
+		<mapping resource="com/multivision/ehrms/business/Employee.hbm.xml" />
+		<mapping resource="com/multivision/ehrms/business/Project.hbm.xml" />
+		<mapping resource="com/multivision/ehrms/business/EmployeeProjectMapping.hbm.xml" />
+		<mapping resource="com/multivision/ehrms/business/LeaveRequest.hbm.xml" />
+		<mapping resource="com/multivision/ehrms/business/Requirement.hbm.xml" />
+		<mapping resource="com/multivision/ehrms/business/Applicant.hbm.xml" />
+		<mapping resource="com/multivision/ehrms/business/EmployeeShiftTime.hbm.xml" />
+		<mapping resource="com/multivision/ehrms/business/SubMenuManagement.hbm.xml" />
+		<mapping resource="com/multivision/ehrms/business/ParentMenuManagement.hbm.xml" />
+		<mapping resource="com/multivision/ehrms/business/RoleMenuAccess.hbm.xml" />
+-->
+	</session-factory>
+</hibernate-configuration>

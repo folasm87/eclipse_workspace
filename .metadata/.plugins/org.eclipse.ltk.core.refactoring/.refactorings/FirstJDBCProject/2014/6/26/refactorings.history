@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FirstJDBCProject/src/net/multivision/dao/studentin&apos; to &apos;studentin.txt&apos;" description="Rename resource &apos;studentin&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/net/multivision/dao/studentin" name="studentin.txt" stamp="1403894952276" updateReferences="true"/>
+</session>

@@ -1,0 +1,4 @@
+Create an "animal" class with at least 6 properties
+use sessionSaveorUpdate to insert 10 animals into the table (TestStudent.java)
+use query object with HQL to get all animals (TestStudentQuery.java)
+use criteria api to get only select animals (TestStudentCriteria.java)

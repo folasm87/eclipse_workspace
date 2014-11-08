@@ -1,0 +1,50 @@
+/**
+ * 
+ */
+
+$(function(){
+	$('#submit').click(function(){
+		//$('#container').append('<img src="ajax-loader.gif" alt="Currently Loading" id="loading"/>');
+		var username = $('#username').val(); //grabs the value for the id='name';
+		var password = $('#password').val();
+		//var comment = $('#comment').val();
+		
+		$.ajax({
+			url: 'login.do', //how it knows what Servlet to call
+			type: 'POST', //what type of http method	
+			data: 'username='+username+'&password='+password,
+			success: function(response){
+				//$('#response').remove();
+				//$('#loading').remove();
+				//$('#container').append('<p id="response"></p>');
+				//$('#loading').fadeOut(500);
+				//$('#response').fadeOut(2000);
+		}});
+		return false;
+		
+	});
+	
+	$('#deposit').click(function(){
+		
+		var amount = $('#amount').val();
+		var balance = $('#balance').val();
+	
+		
+		$.ajax({
+			url: 'deposit.do', //how it knows what Servlet to call
+			type: 'POST', //what type of http method	
+			data: 'amount='+amount+'&balance='+balance,
+			success: function(response){
+				/*
+				$('#response').remove();
+				$('#loading').remove();
+				$('#container').append('<p id="response"></p>');
+				$('#loading').fadeOut(500);
+				$('#response').fadeOut(2000);
+				*/
+		}});
+		return false;
+		
+	});
+	
+});

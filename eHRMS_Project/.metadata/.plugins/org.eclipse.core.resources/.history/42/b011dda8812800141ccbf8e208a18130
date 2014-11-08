@@ -1,0 +1,15 @@
+package net.mv.dao;
+
+import javax.persistence.*;
+
+@Entity
+public class User {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="ANIMAL_ID")
+	private long ANIMAL_ID;
+	@Column(name="NAME")
+	private String NAME;
+
+}

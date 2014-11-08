@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.multivision.ehrms.business.Requirement" table="Requirement">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="requirementId" column="requirement_id" type="string" />
+		<property name="clientName" column="client_name" type="string" />
+		<property name="clientDescription" column="client_description" type="string" />
+		<property name="url" column="url" type="string" />
+		<property name="positionName" column="position_name" type="string" />
+		<property name="noOfVancancy" column="no_of_vancancy" type="string" />
+		
+		<property name="endDate" column="end_date"
+			type="string" />
+		<property name="positionStatus" column="postion_status" type="string" />
+		<property name="minimumQualification" column="minimum_qualification"
+			type="string" />
+		<property name="optionalRequirement" column="optional_requirement" type="string" />
+		<property name="comments" column="comments" type="string" />
+		<property name="status" column="status" type="string" />
+		<property name="location" column="location" type="string" />
+		<property name="skillset" column="skillset" type="string" />
+		
+	</class>
+</hibernate-mapping>

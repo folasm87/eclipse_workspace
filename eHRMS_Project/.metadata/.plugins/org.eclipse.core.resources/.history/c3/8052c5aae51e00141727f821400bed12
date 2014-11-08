@@ -1,0 +1,28 @@
+package com.multivision.ehrms.service.data;
+
+import java.util.List;
+
+import com.multivision.ehrms.business.Resource;
+import com.multivision.ehrms.service.data.interfaces.IResourceDataService;
+
+public class ResourceDataService implements IResourceDataService {
+
+	@Override
+	public List<Resource> getResource() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Long saveResource(Resource requirement) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Resource getResource(Long Id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

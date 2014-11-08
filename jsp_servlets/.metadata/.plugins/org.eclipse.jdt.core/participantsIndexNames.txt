@@ -1,0 +1,9 @@
+INDEX VERSION 1.126
+C:\eclipse_workspace\jsp_servlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1340414359.index
+\FirstAjaxProject\src
+C:\eclipse_workspace\jsp_servlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3087887531.index
+\JSTLTutorialProject\src
+C:\eclipse_workspace\jsp_servlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1672329654.index
+\FirstWebProject\src
+C:\eclipse_workspace\jsp_servlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1553679895.index
+\AjaxAssignment\src

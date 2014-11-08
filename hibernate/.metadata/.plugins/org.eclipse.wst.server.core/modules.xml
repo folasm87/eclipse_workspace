@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.j2ee.server:StudentWebProject" serverId="Oracle WebLogic Server 12c (12.1.2) at localhost [mydomain]"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:TimeCardSystemProject" serverId="Oracle WebLogic Server 12c (12.1.2) at localhost [mydomain]"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:AnimalWebProject" serverId="Oracle WebLogic Server 12c (12.1.2) at localhost [mydomain]"/>
+</modules>

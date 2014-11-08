@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.multivision.ehrms.business.Task" table="Tasks">
+		<id name="id" type="long">
+			<generator class="native" />
+		</id>
+		<property name="taskId" column="task_id" type="string" />
+		<property name="name" column="name" type="string" />
+		<property name="estimatedHours" column="estimated_hours" type="string" />
+
+		<many-to-one name="project" class="com.multivision.ehrms.business.Project" fetch="select">
+            <column name="ID" not-null="true" />
+        </many-to-one>
+       
+       <many-to-one name="taskHandler" column="project_coordinator"
+			class="com.multivision.ehrms.business.Employee" fetch="join" />
+	</class>
+</hibernate-mapping>

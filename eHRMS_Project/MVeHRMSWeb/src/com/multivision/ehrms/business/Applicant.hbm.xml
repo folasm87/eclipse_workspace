@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.multivision.ehrms.business.Applicant" table="Applicant">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="name" column="name" type="string" />
+		<property name="dob" column="dob" type="string" />
+		<property name="basicqualification" column="b_qualification" type="string" />
+		<property name="masterqualification" column="m_qualification" type="string" />
+		<property name="doctoratequalification" column="d_qualification" type="string" />
+		<property name="experience" column="experience" type="string" />
+		<property name="jobProfile" column="job_profile" type="string" />
+		<property name="mobileNo" column="mobile_no" type="string" />
+		<property name="email" column="email"
+			type="string" />
+		<property name="skillSet" column="skill_set" type="string" />
+		<property name="resume" column="resume"
+			type="string" />
+		<property name="username" column="username" type="string" />
+		<property name="password" column="password" type="string" />
+		<property name="url" column="url" type="string" />
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+package com.multivision.imm.action;
+
+import org.apache.struts.action.Action;
+
+import com.multivision.imm.business.BusDelegate;
+
+public class AddNewItemAction extends Action {
+
+	BusDelegate bd;
+	
+	public void setBusinessdel(BusDelegate bd){
+		
+		this.bd = bd;
+	}
+	
+	
+}

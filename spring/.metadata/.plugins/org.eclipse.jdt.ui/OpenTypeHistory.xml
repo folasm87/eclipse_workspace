@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=StrutsSpringAnnotations/C:\/eclipse_workspace\/spring\/StrutsSpringAnnotations\/WebContent\/WEB-INF\/lib\/org.springframework.context-3.0.0.RELEASE.jar&lt;org.springframework.jndi(JndiObjectFactoryBean.class[JndiObjectFactoryBean" modifiers="33" timestamp="1405609877115"/>
+<typeInfo handle="=SpringAOP/src&lt;net.mv.aop{DoSomething.java[DoSomething" modifiers="513" timestamp="1405705119130"/>
+<typeInfo handle="=SpringAOPStopwatch/src&lt;net.mv.aop{Timed.java[Timed" modifiers="513" timestamp="1405709062607"/>
+<typeInfo handle="=FirstSimpleSpringMVCProject/C:\/eclipse_workspace\/spring\/FirstSimpleSpringMVCProject\/WebContent\/WEB-INF\/lib\/org.springframework.web-3.1.0.RELEASE.jar&lt;org.springframework.web.context(ContextLoaderListener.class[ContextLoaderListener" modifiers="33" timestamp="1405951874033"/>
+<typeInfo handle="=FirstSimpleSpringMVCProject/C:\/eclipse_workspace\/spring\/FirstSimpleSpringMVCProject\/WebContent\/WEB-INF\/lib\/org.springframework.web.servlet-3.1.0.RELEASE.jar&lt;org.springframework.web.servlet(DispatcherServlet.class[DispatcherServlet" modifiers="33" timestamp="1405951873781"/>
+<typeInfo handle="=FirstSimpleSpringMVCProject/C:\/eclipse_workspace\/spring\/FirstSimpleSpringMVCProject\/WebContent\/WEB-INF\/lib\/org.springframework.web.servlet-3.1.0.RELEASE.jar&lt;org.springframework.web.servlet.view(InternalResourceViewResolver.class[InternalResourceViewResolver" modifiers="33" timestamp="1405951873781"/>
+<typeInfo handle="=SpringMVCMinXml/C:\/eclipse_workspace\/spring\/SpringMVCMinXml\/WebContent\/WEB-INF\/lib\/org.springframework.transaction-3.1.0.RELEASE.jar&lt;org.springframework.dao.annotation(PersistenceExceptionTranslationPostProcessor.class[PersistenceExceptionTranslationPostProcessor" modifiers="33" timestamp="1405965970820"/>
+<typeInfo handle="=SpringMVCMinXml/C:\/eclipse_workspace\/spring\/SpringMVCMinXml\/WebContent\/WEB-INF\/lib\/org.springframework.orm-3.1.0.RELEASE.jar&lt;org.springframework.orm.hibernate4(HibernateExceptionTranslator.class[HibernateExceptionTranslator" modifiers="33" timestamp="1405965970704"/>
+<typeInfo handle="=SpringMVCMinXml/C:\/eclipse_workspace\/spring\/SpringMVCMinXml\/WebContent\/WEB-INF\/lib\/org.springframework.context-3.1.0.RELEASE.jar&lt;org.springframework.context.support(ResourceBundleMessageSource.class[ResourceBundleMessageSource" modifiers="33" timestamp="1405965970261"/>
+<typeInfo handle="=SpringMVCMinXml/src&lt;net.mv.model{EmployeeDao.java[EmployeeDao" modifiers="513" timestamp="1405970628702"/>
+<typeInfo handle="=FirstSimpleSpringMVCProject/src&lt;net.mv.model{UserDao.java[UserDao" modifiers="513" timestamp="1405973480396"/>
+</typeInfoHistroy>

@@ -1,0 +1,28 @@
+Buildfile: C:\eclipse_workspace\ejb\.metadata\.plugins\oracle.eclipse.tools.webservices\ant\build.xml
+Trying to override old definition of datatype wsgen
+
+fork_build:
+     [java] Buildfile: C:\eclipse_workspace\ejb\.metadata\.plugins\oracle.eclipse.tools.webservices\ant\build.xml
+     [java] 
+     [java] build:
+     [java]     [wsdlc] Catalog dir = C:\Users\Owner\AppData\Local\Temp\_ckr59b
+     [java]     [wsdlc] Download file [calculatorWSDLFile.wsdl] to C:\Users\Owner\AppData\Local\Temp\_ckr59b
+     [java]     [wsdlc] srcWsdl is redefined as [ C:\Users\Owner\AppData\Local\Temp\_ckr59b\calculatorWSDLFile.wsdl ]
+     [java]     [wsdlc] Consider using <depends>/<produces> so that wsimport won't do unnecessary compilation
+     [java]     [wsdlc] parsing WSDL...
+     [java]     [wsdlc] 
+     [java]     [wsdlc] 
+     [java]     [wsdlc] 
+     [java]     [wsdlc] Generating code...
+     [java]     [wsdlc] 
+     [java]     [wsdlc] 
+     [java]     [wsdlc] Compiling code...
+     [java]     [wsdlc] 
+     [java] [AntUtil.deleteDir] Deleting directory C:\Users\Owner\AppData\Local\Temp\_ckr59b
+     [java] 
+     [java] BUILD SUCCESSFUL
+     [java] Total time: 23 seconds
+BUILD SUCCESSFUL
+
+BUILD SUCCESSFUL
+Total time: 30 seconds

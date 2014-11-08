@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="net.mv.dao.Student" table="STUDENT">
+		<!-- id is your primary key, assigned so autogenerates the id for you -->
+		<id name="sid" type="long" column="STUD_ID">
+			<generator class="increment"/>
+		</id>
+		
+		<property name="fname">
+			<column name="STUD_FIRSTNAME"/>
+		</property>
+		<property name="lname">
+			<column name="STUD_LASTNAME"/>
+		</property>
+		<property name="email">
+			<column name="STUD_EMAIL"/>
+		</property>
+		<property name="age">
+			<column name="STUD_AGE"/>
+		</property>
+	</class>
+</hibernate-mapping>

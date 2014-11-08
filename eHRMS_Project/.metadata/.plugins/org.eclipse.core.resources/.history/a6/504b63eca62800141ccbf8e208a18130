@@ -1,0 +1,9 @@
+package net.mv.dao;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+public class DAO {
+
+}

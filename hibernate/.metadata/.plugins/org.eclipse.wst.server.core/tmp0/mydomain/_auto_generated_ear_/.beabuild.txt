@@ -1,0 +1,3 @@
+C\:/eclipse_workspace/hibernate/TimeCardSystemProject/WebContent = TimeCardSystemProject.war
+C\:/eclipse_workspace/hibernate/.metadata/.plugins/org.eclipse.core.resources/TimeCardSystemProject/build/weboutput = TimeCardSystemProject.war
+C\:/eclipse_workspace/hibernate/TimeCardSystemProject/build/classes = TimeCardSystemProject.war/WEB-INF/classes

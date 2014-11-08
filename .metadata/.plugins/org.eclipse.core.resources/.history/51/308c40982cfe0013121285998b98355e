@@ -1,0 +1,28 @@
+package net.multivision.dao;
+
+
+import java.io.*;
+import java.util.*;
+
+
+public class IoDB {
+
+	public static void main(String[] args) {
+		File file = new File("src/net/multivision/dao/studentin.txt");
+		
+		FileReader fr;
+		BufferedReader (r;
+		
+		try{
+			fr = new FileReader(file);
+			br = new BufferedReader(br);
+			
+			int line_count = 0;
+			while(true){
+				
+				
+			}
+		}
+	}
+
+}

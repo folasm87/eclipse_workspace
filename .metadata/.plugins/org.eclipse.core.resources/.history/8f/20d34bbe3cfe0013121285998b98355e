@@ -1,0 +1,132 @@
+package net.multivision.dao;
+
+
+import java.io.*;
+import java.util.*;
+import java.sql.*;
+
+
+public class IoDB {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		File file = new File("src/net/multivision/dao/studentin.txt");
+		
+		FileReader fr;
+		BufferedReader br;
+		
+		Connection conn = null;
+		
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		
+		String sql_table = "create table ";
+		String sql_insert = "insert into ";
+		try{
+			fr = new FileReader(file);
+			br = new BufferedReader(fr);
+			
+			int line_count = 0;
+			String line = null;
+			//String sql_table = "create table ";
+			while(true){
+				
+				line = br.readLine();
+				
+				line_count += 1;
+				
+				//String[] table_info;
+				
+				if (line == null){
+					break;
+				}
+				
+				if (line_count == 1){
+					sql_table = sql_table + line + "(";
+					sql_insert = sql_insert + line + " (";
+				}else if (line_count == 2){
+					
+					ArrayList col_name = new ArrayList<String>();
+					ArrayList col_type = new ArrayList<String>();
+					ArrayList col_size = new ArrayList<String>();
+					
+					
+					String[] table_info = line.split(":");
+					int line_len = table_info.length;
+					int j, k;
+					
+					for (int i = 0; i < line_len; i+=3){
+						j = i+1;
+						k = i+2;
+						col_name.add(table_info[i]);
+						
+						if (j < line_len){
+							col_type.add(table_info[j]);
+						}
+						if (k < line_len){
+							col_size.add(table_info[k]);
+						}
+					}
+					
+					
+					Iterator<String> iter1 = col_name.iterator();
+					Iterator<String> iter2 = col_type.iterator();
+					Iterator<String> iter3 = col_size.iterator();
+					
+					
+					String properties = "";
+					//String insert_field = "";
+					while (iter1.hasNext() && iter2.hasNext() && iter3.hasNext()){
+						String temp1 = iter1.next();
+						String temp2 = iter2.next();
+						String temp3 = iter3.next();
+						properties = properties + temp1 + " " + temp2 + "(" + temp3 + ")";
+						sql_insert = sql_insert + temp1; 
+						insert_field += "?";
+						if(iter1.hasNext()){
+							properties += ", ";
+							sql_insert += ", ";
+							//insert_field += ", ";
+						}
+					}
+					
+					properties += ")";
+					System.out.println(properties);
+					
+					sql_table = sql_table +  properties;
+					//sql_insert += ") values (" + insert_field + ")";
+					System.out.println(sql_table);
+					System.out.println(sql_insert);
+					//sql_table += ; 
+				}else{
+					
+					String[] insert_info = line.split(":");
+					String insert_field = "";
+					for(int k = 0; k < insert_info.length; k++){
+						insert_field += insert_info[k];
+					}
+					ArrayList inserts = new ArrayList<String>();
+					String ins_stmt = sql_insert + ") values (" + 
+					inserts.add(e)
+					
+				}
+				
+				
+			}
+			
+			conn = DriverManager.getConnection(url, "core", "core"); //password
+			
+			//make statement object
+			Statement stmt = conn.createStatement();
+			
+			//run the statement
+			//stmt.execute(sql_table);
+			
+			
+			System.out.println(sql_table);
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

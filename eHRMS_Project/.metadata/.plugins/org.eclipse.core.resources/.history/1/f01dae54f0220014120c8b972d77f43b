@@ -1,0 +1,293 @@
+# -- standard errors --
+errors.header=<UL>
+errors.prefix=<LI><font color="red">
+errors.suffix=</font></LI>
+errors.footer=</UL>
+# -- validator --
+errors.invalid={0} Is Invalid.
+errors.maxlength={0} can not be greater than {1} characters.
+errors.minlength={0} can not be less than {1} characters.
+errors.range={0} is not in the range {1} through {2}.
+errors.required={0} is required.
+errors.byte={0} must be an byte.
+errors.date={0} is not a date.
+errors.double={0} must be an double.
+errors.float={0} must be an float.
+errors.integer={0} must be an integer.
+errors.long={0} must be an long.
+errors.short={0} must be an short.
+errors.creditcard={0} is not a valid credit card number.
+errors.email={0} is an invalid e-mail address.
+# -- other --
+errors.cancel=Operation cancelled.
+errors.detail={0}
+errors.general=The process did not complete. Details should follow.
+errors.token=Request could not be completed. Operation is not in sequence.
+# -- welcome --
+welcome.title= Welcome
+lable.username=Username
+lable.password=Password
+authentication.failed=Invalid Username or Password. Please try again.
+global.db.connectivity.failure=Datasource is connected. Check the connectivity of database and try.
+global.db.fetch.failure=Could not fetch data from database.
+
+# -- Menu --
+label.home=HOME
+label.access.management=Access Management
+label.employee.management=Employee Management 
+leaverequest.page.header=Leave Request
+projectmanagement.page.header=Project Management
+project.page.header=Project
+task.page.header=Task
+resource.page.header=Resource
+resourcemapping.page.header=Resource Mapping
+requirementmanagement.page.header=Requirement Management
+requirement.page.header=Requirement
+candidate.page.header=Candidate Search
+applicantmanagment.page.header=Applicant Management
+applicantregister.page.header=Update Profile
+jobsearch.page.header=Job Search
+timesheet.page.header=Time Sheet Management
+employeetimesheet.page.header=Employee Shift Time Update
+leaveapproval.page.header=Leave Approval
+
+label.jobprofile.degree=Job Profile
+label.resume.upload=Resume Upload
+selfRegister.page.header=Self Registration
+label.qualifying.degree=Qualifying Degree
+label.experienceinmonth.degree=	Experience in months
+employee.table.header.column.anniversary=Employee Anniversary Report
+
+applicant.page.info=Please fill up the below details to add new applicant information. (*) marked fields are must to fill.
+ 
+label.inventory.management=Inventory Management
+addnewitem.page.header=Add New Item
+
+
+#System Role use case labels
+sysrole.page.header=System Roles
+sysrole.table.header.column.role=Role
+sysrole.table.header.column.desc=Description
+table.header.column.email=Email
+table.header.column.skillset=Skill Set
+table.header.column.resumeheading=Resume Heading
+sysrole.table.header.column.menuaccess=Menu Access
+sysrole.table.header.column.access=Access
+requirement.page.info=Please fill up the below details to add new Requirement information. (*) marked fields are must to fill.
+leaveapproval.page.info=Please fill up the below details to add new Leave Approval information. (*) marked fields are must to fill.
+employeeshift.page.info=Please fill up the below details to add new employee shift information. (*) marked fields are must to fill.
+
+
+
+#Employee use case labels
+employee.page.header=Employees
+employee.view.page.header=Employee Information
+employee.page.info=Please fill up the below details to add new employee information. (*) marked fields are must to fill.
+employee.table.header.column.empid=Emp. ID
+employee.table.header.column.empname=Name
+employee.table.header.column.dob=Date of Birth
+employee.table.header.column.mobile=Mobile
+employee.table.header.column.pemail=Personal Email ID
+employee.table.header.column.oemail=Office Email ID
+employee.table.header.column.jdate=Join Date
+employee.table.header.column.desig=Designation
+employee.add.page.header=Add New Employee
+employee.lable.workphone=Work Phone
+employee.lable.address=Address
+employee.lable.immig=Immigration Status
+employee.lable.benefits=Benefits
+employee.lable.compen=Compensation
+employee.lable.client=Client Info
+employee.lable.emptype=Employment Type
+employee.lable.vendor=Vendor
+employee.lable.resigndate=Resignation Date
+employee.lable.resign.reason=Reason for Resignation
+employee.exit.page.header=Employee Exit Details
+employee.lable.role=Role of the Employee in eHRMS system
+employee.data.added.success=Employee data updated successfully.
+employee.data.added.duplicate.failed=Employee data is not saved. The reason is, the same employee id already exists.
+employee.data.added.general.failure=Employee data is not saved. The reason is , {0}.
+employee.resign.page.info=Please fill up the below details to mark the employee as resigned.
+employee.data.added.email.failed=Employee data is successfully saved, but email has not been sent to the employee.
+employee.get.details=Get Employee Details
+employee.anniversary.Record=There is no employee to celebrate anniversary year
+
+employee.id.mandatory=Employee Id is required field
+employee.name.mandatory=Name is required field
+employee.dob.mandatory=Date of Birth should be required
+employee.joindate.mandatory=Date of Joining should be entered
+
+# Navigation links
+go.to.main.page=Go to Main Page
+
+#Project
+project.add.page.header=Add New Project
+project.page.info=Please fill up the below details to add new project information. (*) marked fields are must to fill.
+project.data.added.success=Project data updated successfully.
+project.data.added.duplicate.failed=Project data is not saved. The reason is, the same project id already exists.
+project.data.added.general.failure=Project data is not saved. The reason is , {0}.
+project.table.header.column.projid=Project ID
+project.table.header.column.projname=Name
+project.table.header.column.customer=Customer
+project.table.header.column.technologies=Technologies
+project.table.header.column.businessObjective=Business Objective
+project.table.header.column.category=Category
+project.table.header.column.contractRefNo=Contract No.
+project.table.header.column.estimatedHours=Estimated Hours
+project.table.header.column.estimatedCost=Estimated Cost
+project.table.header.column.projCoord=Project Coordinator
+project.table.header.column.projMan=Project Manager
+project.table.header.column.remarks=Remarks
+project.view.page.header=Project Information
+project.page.header=Projects
+project.table.header.column.enddate = End Date
+project.table.header.column.startdate = Start Date
+employeemapping.page.header  = Resource Mapping
+
+#Task
+task.add.page.header=Add New Task
+task.page.info=Please fill up the below details to add new task information. (*) marked fields are must to fill.
+task.data.added.success=Task data updated successfully.
+task.data.added.duplicate.failed=Task data is not saved. The reason is, the same project id already exists.
+task.data.added.general.failure=Task data is not saved. The reason is , {0}.
+task.table.header.column.taskid=Task ID
+task.table.header.column.taskname=Name
+task.table.header.column.duration=Duration
+task.table.header.column.project=Project
+task.view.page.header=Task Information
+task.page.header=Tasks
+
+
+#Resource
+resource.add.page.header=Add New Resource
+resource.page.info=Please fill up the below details to add new resource information. (*) marked fields are must to fill.
+resource.data.added.success=Resource data updated successfully.
+resource.data.added.duplicate.failed=Resource data is not saved. The reason is, the same project id already exists.
+resource.data.added.general.failure=Resource data is not saved. The reason is , {0}.
+resource.table.header.column.resourceid=Resource ID
+resource.table.header.column.resourcename=Name
+resource.table.header.column.cost=Cost
+resource.table.header.column.project=Project
+resource.view.page.header=Resource Information
+resource.page.header=Resources
+
+leave.data.added.success=Leave Request data updated successfully.
+employeeShift.data.added.success=Employee Shift Time data updated successfully.
+label.attach.file = Attached File
+
+
+#Applicant Use Case 
+applicant.data.added.duplicate.failed=Applicant data is not saved. The reason is, the same applicant id already exists.
+applicant.data.added.general.failure=Applicant data is not saved. The reason is , {0}.
+applicant.data.added.success=Your registration information is saved successfully
+applicant.update.profile=Update Profile
+applicant.cretae.login=Create Login Details
+applicant.confirm.password=Confirm the Password
+applicant.contact.details=Your Contact Details
+applicant.employement.details=Your Current Employment Details
+applicant.education.background=Your Education Background
+applicant.basic.education=Please select your Basic Education
+applicant.master.education=Please select your Masters Education
+applicant.doctorate.education=Please select your Doctorate Education
+applicant.upload.resume=Please Upload Your Resume Here
+applicant.register.info=Become a Member of MVISION and find the right Job.
+applicant.goLogin.info=Go to Login
+applicant.previllage=You Have no Privilege to update Applicant Profile
+contact.details=Contact Details
+employement.details=Employment Details
+education.background=Education Background
+
+
+#Role Menu Access
+role.menu.module=Menu/Module
+role.menu.screenName=Screen Name
+role.menu.isaccess=ISACCESS
+button.save=Save
+menu.data.added.success=Menu Access data updated successfully.
+employee.resign.details=Employee Resignation Details
+
+#Leave Request
+leaverequest.data.added.duplicate.failed=Leave Request data is not saved. The reason is, the same Leave Request id already exists.
+leaverequest.data.added.general.failure=Leave Request data is not saved. The reason is , {0}.
+leaverequest.page.header=Leave Request
+leaverequest.page.info=Please fill up the below details to add new leave information. (*) marked fields are must to fill
+leaverequest.table.leaveType=Leave Type
+leaverequest.table.fromDate=From Date
+leaverequest.table.toDate=To Date
+leaverequest.table.noofdays=No Of Days
+leaverequest.table.reason=Reason
+leaverequest.table.status=Status
+leaverequest.table.addnewleaverquest=Add New Leave Request
+empty.record.found=No record found. Click Here to add new record.
+common.view=View
+leave.previllage=You Have no Privilege to Apply Leave Request
+
+#Resource Mapping 
+employee.select.project=Select Project
+employee.getresource.List=Get Resource List
+employee.add.resource=Add Resource Mapping
+employee.sino=Sl.No
+employee.name=Employee Name
+
+#Requirement
+requirement.new=New Requirement
+requirement.requirement.Id=Requirement Id
+requirement.client.name=Client Name
+requirement.client.description=Client Description
+requirement.web.url=Web Site Url
+requirement.position.name=Position Name
+requirement.no.of.vancancy=No Of Vacancy
+requirement.closeing.date=Requirement Closing Date
+requirement.current.date=Current Positioning Date
+requirement.minimum.qualification=Minimum Qualification
+requirement.optional=Optional Requirement
+requirement.comments=Comments
+leaverequest.requirement.details=Requirement Details
+requirement.data.added.success=Requirement data updated successfully.
+requirement.data.added.duplicate.failed=Requirement data is not saved. The reason is, the same Requirement id already exists.
+requirement.data.added.general.failure=Requirement data is not saved. The reason is , {0}.
+requirement.title=Requirement
+requirement.add.new=Add New Requirement
+requirement.view=Requirement View
+leaveapproval.title=Leave Approval
+
+
+#Candidate Search
+title.candidate.search = Candidate Search
+label.job.id  = Job Id
+label.eligibility = Eligibility
+label.skill.set = Skill Set
+label.experience.months = Experience in months
+candidate.app.id = Applicant Id
+candidate.app.name = Applicant Name
+candidate.education = Education
+label.year.experience = Years of Experience
+
+
+
+#Job Search
+title.job.search = Job Search
+label.employer = Employer
+label.design.posi = Designation/Position
+label.location = Location
+job.techno.skillset = Technology/SkillSet
+label.requirement.id = Requirement Id
+label.not.found=There no record found the search........
+update.profile=Profile
+
+#Employee Shift Time Update
+title.add.emp.shift.update = Add Employee Shift Time Update
+label.date = Date
+label.hours = Hours
+label.jobdone = Job Done
+label.remarks = Remarks
+label.employee.id = Employee Id 
+employeeShift.data.added.duplicate.failed=Employee Shift Timing data is not saved. The reason is, the same employee Shift Timing id already exists.
+employeeShift.data.added.general.failure=Employee Shift data is not saved. The reason is , {0}.
+job.apply.success = Successfully applied for the job.check the mail for further details
+employee.project.data.added.success=Employee Project Mapping data updated successfully.
+employee.project.data.added.duplicate.failed=Employee Project Mapping data is not saved. The reason is, the same employee id already exists.
+employee.project.data.added.general.failure=Employee Project Mapping data is not saved. The reason is , {0}.
+label.view.profile=Download Profile
+leave.approval.previllage=You Have no Privilege to Approve the Leave Request
+jobsearch.data.added.email.failed=Your apply information is saved successfully, but email has not been sent to the your mail id.

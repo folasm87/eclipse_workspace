@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<people>
+	<person>
+		<id>1001</id>
+		<firstName>Chris</firstName>
+		<lastName>Canty</lastName>
+		<email>ccanty@ravens.com</email>
+	</person>
+	
+	<person>
+		<id>1002</id>
+		<firstName>Sean</firstName>
+		<lastName>Dolittle</lastName>
+		<email>sdolittle@athletics.com</email>
+	</person>
+	
+	<person>
+		<id>1003</id>
+		<firstName>Joe</firstName>
+		<lastName>Harris</lastName>
+		<email>jharris@clevelandcavs.com</email>
+	</person>
+	
+	<person>
+		<id>1004</id>
+		<firstName>Chris</firstName>
+		<lastName>Long</lastName>
+		<email>clong@rams.com</email>
+	</person>
+	
+</people>

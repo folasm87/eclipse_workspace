@@ -1,0 +1,56 @@
+package com.multivision.imm.service.data;
+
+import java.util.List;
+
+import com.multivision.ehrms.business.FilterConditions;
+import com.multivision.ehrms.service.data.BaseDataService;
+import com.multivision.imm.business.Item;
+import com.multivision.imm.service.data.interfaces.IItemDataService;
+
+public class ItemDataService extends BaseDataService implements IItemDataService {
+
+	@Override
+	public Object insertItem(Item item) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Object updateItem(Item item) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteItem(Item item) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Object retrieveItem(Item item, String str) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List retrieveAllItems(Item item) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List searchItem(List<FilterConditions> criteriaList)
+			throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List searchItemOrdered(List<FilterConditions> criteriaList,
+			String str, boolean ord) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

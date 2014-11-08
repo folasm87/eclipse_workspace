@@ -1,0 +1,2 @@
+john is a student with an id of 1, who was born on 1/1/1980, whose fee was 500.5.
+mandy is a student with an id of 4, who was born on 4/4/1983, whose fee was 1200.0.

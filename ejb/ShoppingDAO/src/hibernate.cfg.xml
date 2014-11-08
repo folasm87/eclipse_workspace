@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+<property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+
+<!-- information to connect to JNDI data source 
+
+<property name="hibernate.connection.datasource">jdbc/hibernate</property>
+<property name="hibernate.jndi.uri">t3://localhost:7001</property>
+<property name="hibernate.jndi.class">weblogic.jndi.WLInitialContextFactory</property>
+
+-->
+<!-- url, username and password only needed for local data source-->
+
+
+ 
+<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+<property name="hibernate.connection.username">hibernate</property>
+<property name="hibernate.connection.password">hibernate</property>
+
+
+<property name="hibernate.connection.pool_size">10</property>
+<property name="show_sql">true</property>
+<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+<property name="hibernate.hbm2ddl.auto">update</property>
+<!-- Mapping files --><!-- Tells what table gets mapped to what object -->
+<!-- <mapping resource="student.hbm.xml"/> -->
+<mapping class="dataservice.Shopping"/>
+</session-factory>
+</hibernate-configuration>

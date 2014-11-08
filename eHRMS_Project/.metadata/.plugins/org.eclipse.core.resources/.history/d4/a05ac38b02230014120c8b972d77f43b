@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Here configure all the struts action classes as beans and inject the 
+	components as dependent beans. The bean name configured here will be used 
+	for the struts framework for its navigation through struts-config.xml file. -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	<aop:aspectj-autoproxy />
+
+	<bean name="/adminHomePage" class="com.multivision.ehrms.action.HomePageAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	<bean name="/home" class="com.multivision.ehrms.action.HomeAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	<bean name="/systemRoles" class="com.multivision.ehrms.action.SystemRoleAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	<bean name="/employees" class="com.multivision.ehrms.action.EmployeeAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	<bean name="/saveEmployees" class="com.multivision.ehrms.action.EmployeeAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/projects" class="com.multivision.ehrms.action.ProjectAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	<bean name="/saveProjects" class="com.multivision.ehrms.action.ProjectAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	
+	<bean name="/tasks" class="com.multivision.ehrms.action.ProjectAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	<bean name="/saveProjects" class="com.multivision.ehrms.action.ProjectAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	
+	
+	<bean name="/projects" class="com.multivision.ehrms.action.ProjectAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	<bean name="/saveProjects" class="com.multivision.ehrms.action.ProjectAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	
+	<bean name="/employeeprojectmapping"
+		class="com.multivision.ehrms.action.EmployeeProjectMappingAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	<bean name="/leaveRequest" class="com.multivision.ehrms.action.LeaveRequestAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/saveLeaveRequest" class="com.multivision.ehrms.action.LeaveRequestAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/leaveApproval" class="com.multivision.ehrms.action.LeaveRequestAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/saveLeaveRequestApproval" class="com.multivision.ehrms.action.LeaveRequestAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/requirement" class="com.multivision.ehrms.action.RequirementAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/saveRequirement" class="com.multivision.ehrms.action.RequirementAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/applicant" class="com.multivision.ehrms.action.ApplicantAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/DownloadResume" class="com.multivision.ehrms.action.DownloadResumeAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+
+
+	<bean name="/saveApplicant" class="com.multivision.ehrms.action.ApplicantAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+
+	<bean name="/jobSearch" class="com.multivision.ehrms.action.JobSearchAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/employeesShift" class="com.multivision.ehrms.action.EmployeeShiftTimeAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/saveEmployeeShift" class="com.multivision.ehrms.action.EmployeeShiftTimeAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/menuAccess" class="com.multivision.ehrms.action.MenuAccessAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/menuAccessSave" class="com.multivision.ehrms.action.MenuAccessAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+
+	<bean name="/applicantSearch" class="com.multivision.ehrms.action.ApplicantSearchAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/saveApplicantRegister" class="com.multivision.ehrms.action.ApplicantAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+
+	<bean name="/updateApplicantRegister" class="com.multivision.ehrms.action.ApplicantAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	
+	<bean name="/applicantView" class="com.multivision.ehrms.action.ApplicantAction">
+		<property name="bsFactory" ref="bsFactory" />
+	</bean>
+	
+
+	
+
+
+
+	<bean name="/logout" class="com.multivision.ehrms.action.LogoutAction" />
+
+	<bean name="bsFactory"
+		class="com.multivision.ehrms.service.business.BusinessServiceFactory"
+		factory-method="getInstance" />
+	<bean id="loggerAspect" class="com.multivision.ehrms.aspects.LoggerAspect" />
+	
+	
+	<bean name="/addNewItem" class="com.multivision.imm.action.AddNewItemAction"/>
+</beans>
+

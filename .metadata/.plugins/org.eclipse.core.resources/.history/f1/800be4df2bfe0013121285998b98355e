@@ -1,0 +1,13 @@
+package net.multivision.dao;
+
+
+import java.io.*;
+import java.util.*;
+public class IoDB {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

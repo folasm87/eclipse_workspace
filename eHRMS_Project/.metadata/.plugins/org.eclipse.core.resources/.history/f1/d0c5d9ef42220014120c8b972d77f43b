@@ -1,0 +1,57 @@
+package com.multivision.ehrms.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.action.ActionMessages;
+
+import com.multivision.ehrms.action.form.TaskForm;
+import com.multivision.ehrms.business.Task;
+import com.multivision.ehrms.business.Project;
+import com.multivision.ehrms.exception.DataSourceConnectivityFailedException;
+import com.multivision.ehrms.exception.DuplicateRecordException;
+import com.multivision.ehrms.service.business.BusinessServiceFactory;
+import com.multivision.ehrms.service.business.interfaces.ITaskBusinessService;
+import com.multivision.ehrms.service.business.interfaces.IProjectBusinessService;
+
+public class TaskAction extends BaseDispatchAction {
+	
+	private Logger logger = Logger.getRootLogger();
+	BusinessServiceFactory bsFactory;
+
+	public BusinessServiceFactory getBsFactory() {
+		return bsFactory;
+	}
+
+	public void setBsFactory(BusinessServiceFactory bsFactory) {
+		this.bsFactory = bsFactory;
+	}
+
+	@Override
+	protected ActionForward perform(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		ActionForward forward = null;
+		if (request.getParameter("method") != null) {
+			String parameter = request.getParameter("method");
+			if (parameter.equalsIgnoreCase("list")) {
+				forward = list(mapping, form, request, response);
+			} else if (parameter.equalsIgnoreCase("add")) {
+				forward = add(mapping, form, request, response);
+			} else if (parameter.equalsIgnoreCase("save")) {
+				forward = save(mapping, form, request, response);
+			} else if (parameter.equalsIgnoreCase("edit")) {
+				forward = edit(mapping, form, request, response);
+			} else if (parameter.equalsIgnoreCase("view")) {
+				forward = view(mapping, form, request, response);
+			}
+		}
+		return forward;
+	}
+
+}

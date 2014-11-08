@@ -1,0 +1,23 @@
+INDEX VERSION 1.126
+C:\eclipse_workspace\struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1459270744.index
+\DispatchActionProject\src
+C:\eclipse_workspace\struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3869807152.index
+\DispatchActionProject\src
+C:\eclipse_workspace\struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2537498542.index
+\StrutsDynaValidationProject\src
+C:\eclipse_workspace\struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\970063.index
+\SimpleStrutsProject\src
+C:\eclipse_workspace\struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2177412362.index
+\DispatchActionProject\src
+C:\eclipse_workspace\struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2035320767.index
+\StrutsWithTiles\src
+C:\eclipse_workspace\struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\606621010.index
+\StrutsDynaValidationProject\src
+C:\eclipse_workspace\struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3817828655.index
+\SimpleStrutsProject\src
+C:\eclipse_workspace\struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2583835277.index
+\StrutsDynaValidationProject\src
+C:\eclipse_workspace\struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1872895259.index
+\StrutsWithTiles\src
+C:\eclipse_workspace\struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3444102960.index
+\StrutsDynaValidationProject\src

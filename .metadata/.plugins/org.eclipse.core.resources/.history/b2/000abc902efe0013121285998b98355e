@@ -1,0 +1,38 @@
+package net.multivision.dao;
+
+
+import java.io.*;
+import java.util.*;
+
+
+public class IoDB {
+
+	public static void main(String[] args) {
+		File file = new File("src/net/multivision/dao/studentin.txt");
+		
+		FileReader fr;
+		BufferedReader br;
+		
+		try{
+			fr = new FileReader(file);
+			br = new BufferedReader(fr);
+			
+			int line_count = 0;
+			String line = null;
+			while(true){
+				String sql_table = "create table \"";
+				line = br.readLine();
+				
+				line_count += 1;
+				
+				if (line == null){
+					break;
+				}else if (line_count == 1){
+					sql_table = sql_table + line;
+				}
+				
+			}
+		}
+	}
+
+}

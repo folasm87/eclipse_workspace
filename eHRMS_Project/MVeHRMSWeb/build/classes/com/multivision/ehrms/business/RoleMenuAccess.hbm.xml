@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.multivision.ehrms.business.RoleMenuAccess" table="Role_Menu_Access"
+		>
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="subMenuManagement" column="subMenu_id"
+			class="com.multivision.ehrms.business.SubMenuManagement" 
+			fetch="join" />
+		<many-to-one name="systemRole" column="system_id"
+			class="com.multivision.ehrms.business.SystemRole" 
+			fetch="join" />
+		
+	</class>
+</hibernate-mapping>

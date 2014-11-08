@@ -1,0 +1,89 @@
+package net.mv.dao;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+public class DAO {
+	
+	public static void insertUser(String username, String password,
+			String fname, String lname, String role, String email, String phone) {
+		
+/*		private String username;
+		private String password;
+		private String fname;
+		private String lname;
+		private String role;
+		private String email;
+		private String phone;*/
+
+		Session session = null;
+
+		try {
+			session = HibernateUtility.getSessionFactory().openSession();
+			System.out.println(username + ": " + fname + " " + lname);
+			Transaction tx = session.beginTransaction();
+			User user = new User();
+
+			user.setUsername(username);
+			user.setPassword(password);
+			user.setFname(fname);
+			user.setLname(lname);
+			user.setRole(role);
+			user.setEmail(email);
+			user.setPhone(phone);
+			
+			System.out.println(user);
+
+			session.saveOrUpdate(user);
+			//session.flush();
+			tx.commit();
+			//session.close();
+
+			// return true;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			// return false;
+		}
+	}
+	
+	public static T_User retrieveUser(String username, String password) {
+
+		Session session = null;
+		User found = null;
+
+		try {
+			session = HibernateUtility.getSessionFactory().openSession();
+			System.out.println(username + ": " + password);
+			//Transaction tx = session.beginTransaction();
+			
+			Query query = session.createQuery("from T_User where T_USERNAME = :username AND PASSWORD = :password ");
+			
+			query.setParameter("username", username);
+			query.setParameter("password", password);
+			//session.saveOrUpdate(user);
+			List<?> list = query.list();
+			
+			found = (T_User)list.get(0);
+			System.out.println("You retrieved the following user:");
+			System.out.println(found);
+			
+			//data.add(found)
+			session.flush();
+			//tx.commit();
+			session.close();
+
+			//return true;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			//return false;
+		}
+		
+		return found;
+	}
+
+}

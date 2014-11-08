@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.interceptor.Interceptors"/>
+<fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
+<fullyQualifiedTypeName name="javax.annotation.PreDestroy"/>
+<fullyQualifiedTypeName name="javax.naming.Context"/>
+<fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+<fullyQualifiedTypeName name="net.mv.interceptor.SimpleBeanRemote"/>
+<fullyQualifiedTypeName name="javax.interceptor.InvocationContext"/>
+<fullyQualifiedTypeName name="javax.interceptor.AroundInvoke"/>
+<fullyQualifiedTypeName name="org.apache.struts.action.ActionMapping"/>
+<fullyQualifiedTypeName name="org.apache.struts.action.ActionForm"/>
+<fullyQualifiedTypeName name="org.apache.struts.action.ActionForward"/>
+<fullyQualifiedTypeName name="org.apache.struts.action.DynaActionForm"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="app.HelloBeanRemote"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="weblogic.jms.common.JMSException"/>
+<fullyQualifiedTypeName name="java.util.Queue"/>
+<fullyQualifiedTypeName name="javax.jms.QueueConnectionFactory"/>
+<fullyQualifiedTypeName name="javax.jms.QueueConnection"/>
+<fullyQualifiedTypeName name="javax.jms.QueueSession"/>
+<fullyQualifiedTypeName name="javax.jms.TextMessage"/>
+<fullyQualifiedTypeName name="javax.jms.QueueSender"/>
+<fullyQualifiedTypeName name="javax.ejb.Remote"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="dataservice.DataDao"/>
+<fullyQualifiedTypeName name="dataservice.DataDaoImpl"/>
+<fullyQualifiedTypeName name="business.ejb.CallerBeanRemote"/>
+<fullyQualifiedTypeName name="dataservice.ShoppingDAO"/>
+<fullyQualifiedTypeName name="com.eintern.helloservice.HelloService"/>
+<fullyQualifiedTypeName name="com.eintern.helloservice.HelloServiceLocator"/>
+<fullyQualifiedTypeName name="com.eintern.helloservice.Hello"/>
+<fullyQualifiedTypeName name="org.hibernate.Session"/>
+<fullyQualifiedTypeName name="dataservice.ShoppingDAOImpl"/>
+</qualifiedTypeNameHistroy>

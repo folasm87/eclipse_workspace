@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.multivision.ehrms.business.Employee" table="Employee">
+		<id name="id" type="long">
+			<generator class="native" />
+		</id>
+		<property name="empId" column="emp_id" type="string" />
+		<property name="name" column="name" type="string" />
+		<property name="address" column="address" type="string" />
+		<property name="dob" column="dob" type="string" />
+		<property name="mobile" column="mobile" type="string" />
+		<property name="workphone" column="workphone" type="string" />
+		<property name="personalEmailId" column="personal_email_id"
+			type="string" />
+		<property name="workEmailId" column="work_email_id" type="string" />
+		<property name="immigirationStatus" column="immigiration_status"
+			type="string" />
+		<property name="joinDate" column="stdate" type="string" />
+		<property name="jobTitle" column="job_title" type="string" />
+		<property name="benefits" column="benefits" type="string" />
+		<property name="compensation" column="compensation" type="string" />
+		<property name="empType" column="employee_type" type="char" />
+		<property name="clientInfo" column="client_info" type="string" />
+		<property name="vendorName" column="vendor_name" type="string" />
+		<many-to-one name="role" column="role_id"
+			class="com.multivision.ehrms.business.SystemRole" fetch="join" />
+		<property name="isResigned" column="is_resigned" type="char" />
+		<property name="resignDate" column="resign_date" type="string" />
+		<property name="resignReason" column="resign_reason" type="string" />
+	</class>
+</hibernate-mapping>

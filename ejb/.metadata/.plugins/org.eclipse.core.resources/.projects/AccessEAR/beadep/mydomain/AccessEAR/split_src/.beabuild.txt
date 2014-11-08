@@ -1,0 +1,6 @@
+C\:/eclipse_workspace/ejb/AccessEAR/EarContent/APP-INF/classes = APP-INF/classes
+C\:/eclipse_workspace/ejb/AccessEJB/build/classes = AccessEJB.jar
+C\:/eclipse_workspace/ejb/FirstWSProject/WebContent = FirstWSProject.war
+C\:/eclipse_workspace/ejb/.metadata/.plugins/org.eclipse.core.resources/FirstWSProject/build/weboutput = FirstWSProject.war
+C\:/eclipse_workspace/ejb/FirstWSProject/build/classes = FirstWSProject.war/WEB-INF/classes
+C\:/eclipse_workspace/ejb/AccessEAR/EarContent/APP-INF/lib/ACD.jar = APP-INF/lib/ACD.jar

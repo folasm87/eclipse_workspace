@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package net.multivision.serializable;
+
+/**
+ * @author Owner
+ *
+ */
+public class SerializationDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

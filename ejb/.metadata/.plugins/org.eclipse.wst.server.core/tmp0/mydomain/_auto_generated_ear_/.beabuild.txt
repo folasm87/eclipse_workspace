@@ -1,0 +1,6 @@
+C\:/eclipse_workspace/ejb/RESTfulService/WebContent = RESTfulService.war
+C\:/eclipse_workspace/ejb/.metadata/.plugins/org.eclipse.core.resources/RESTfulService/build/weboutput = RESTfulService.war
+C\:/eclipse_workspace/ejb/RESTfulService/build/classes = RESTfulService.war/WEB-INF/classes
+C\:/eclipse_workspace/ejb/RESTfulWebClient/WebContent = RESTfulWebClient.war
+C\:/eclipse_workspace/ejb/.metadata/.plugins/org.eclipse.core.resources/RESTfulWebClient/build/weboutput = RESTfulWebClient.war
+C\:/eclipse_workspace/ejb/RESTfulWebClient/build/classes = RESTfulWebClient.war/WEB-INF/classes

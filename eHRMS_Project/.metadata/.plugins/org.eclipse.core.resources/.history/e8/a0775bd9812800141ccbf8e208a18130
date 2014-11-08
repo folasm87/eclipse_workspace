@@ -1,0 +1,18 @@
+package net.mv.dao;
+
+import javax.persistence.*;
+
+@Entity
+public class User {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="ID")
+	private long ID;
+	
+	@Column(name="USER_ID")
+	private String user_id;
+	@Column(name="NAME")
+	private String NAME;
+
+}

@@ -1,0 +1,21 @@
+package com.multivision.ehrms.action.form;
+
+
+
+import com.multivision.ehrms.business.Project;
+
+public class TaskForm {
+
+	private long taskId;
+	
+	
+	
+	private String name;
+	
+	
+	private String duration;
+	
+	
+	
+	private Project project;
+}

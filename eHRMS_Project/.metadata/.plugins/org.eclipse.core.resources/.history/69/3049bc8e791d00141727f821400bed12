@@ -1,0 +1,16 @@
+package com.multivision.imm.action.form;
+
+import org.apache.struts.validator.ValidatorForm;
+
+public class AddNewItemForm extends ValidatorForm {
+	
+	private String itemName;
+	private String itemCost;
+	private String itemDescription;
+	private String itemCategory;
+	
+	
+	
+	
+
+}

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<!-- ============================================ Data Source Configuration -->
+	<!-- ================================================ Form Bean Definitions -->
+	<form-beans>
+		<form-bean name="emptyForm" type="org.apache.struts.action.DynaActionForm" />
+		<form-bean name="employeeForm"
+			type="com.multivision.ehrms.action.form.EmployeeForm" />
+		<form-bean name="projectForm"
+			type="com.multivision.ehrms.action.form.ProjectForm" />
+		<form-bean name="taskForm"
+			type="com.multivision.ehrms.action.form.TaskForm" />
+		<form-bean name="resourceForm"
+			type="com.multivision.ehrms.action.form.ResourceForm" />
+		<form-bean name="employeeprojectmappingForm"
+			type="com.multivision.ehrms.action.form.EmployeeProjectMappingForm" />
+		<form-bean name="leaveRequestForm"
+			type="com.multivision.ehrms.action.form.LeaveRequestForm" />
+		<form-bean name="requirementForm"
+			type="com.multivision.ehrms.action.form.RequirementForm" />
+		<form-bean name="applicantForm"
+			type="com.multivision.ehrms.action.form.ApplicantForm" />
+		<form-bean name="employeeShiftTime"
+			type="com.multivision.ehrms.action.form.EmployeeShiftTimeForm" />
+		<form-bean name="roleAccessForm"
+			type="com.multivision.ehrms.action.form.RoleAccessForm" />
+		<form-bean name="addNewItemForm" 
+			type="com.multivision.imm.action.form.AddNewItemForm"/>
+
+
+	</form-beans>
+	<!-- ========================================= Global Exception Definitions -->
+	<global-exceptions>
+		<!-- sample exception handler <exception key="expired.password" type="app.ExpiredPasswordException" 
+			path="/changePassword.jsp"/> end sample <exception type="java.lang.Exception" 
+			key="label.error.cause" path=".errorPage"></exception> -->
+	</global-exceptions>
+	<!-- =========================================== Global Forward Definitions -->
+	<global-forwards>
+		<!-- Default forward to "Welcome" action -->
+		<forward name="welcome" path="/login.jsp" />
+	</global-forwards>
+	<!-- =========================================== Action Mapping Definitions -->
+	<action-mappings>
+		<action path="/adminHomePage" name="emptyForm">
+			<forward name="success" path=".homePageLayout" />
+			<forward name="failure" path=".homePageLayout" />
+		</action>
+		<action path="/systemRoles" name="roleAccessForm">
+			<forward name="success" path=".systemRoles" />
+			<forward name="failure" path=".homePageLayout" />
+		</action>
+		
+		<action path="/home" name="emptyForm">
+			<forward name="list" path=".home" />
+			<forward name="add" path=".viewemployeeAnn" />
+			
+		</action>
+		
+		
+		<action path="/employees" name="employeeForm" parameter="method"
+			input=".addEmployees" validate="false">
+			<forward name="list" path=".employees" />
+			<forward name="add" path=".addEmployees" />
+			<forward name="edit" path=".addEmployees" />
+			<forward name="view" path=".viewEmployees" />
+			<forward name="delete" path=".deleteEmployees" />
+			<forward name="failure" path=".homePageLayout" />
+		</action>
+		<action path="/saveEmployees" name="employeeForm" parameter="method"
+			input=".addEmployees" validate="true">
+			<forward name="save" path=".addEmployees" />
+			<forward name="resign" path=".deleteEmployees" />
+		</action>
+		<action path="/projects" name="projectForm" parameter="method"
+			input=".addProjects" validate="false">
+			<forward name="list" path=".projects" />
+			<forward name="add" path=".addProjects" />
+			<forward name="edit" path=".addProjects" />
+			<forward name="view" path=".viewProjects" />
+			<forward name="failure" path=".homePageLayout" />
+		</action>
+		<action path="/saveProjects" name="projectForm" parameter="method"
+			input=".addProjects" validate="true">
+			<forward name="save" path=".addProjects" />
+		</action>
+		<action path="/taskNull" parameter=".tasks" type="org.apache.struts.actions.ForwardAction">
+		</action>
+		
+		<action path="/addTasks" name="addNewItemForm" input=".addNewItem" validate="false">
+			<forward name="success" path=".addNewItem"/>
+		</action>
+		
+	<!-- 	<action path="/tasks" name="taskForm" input=".addTasks" validate="false">
+			<forward name="list" path=".tasks" />
+			<forward name="add" path=".addTasks" />
+			<forward name="edit" path=".addTasks" />
+			<forward name="view" path=".viewTasks" />
+			<forward name="failure" path=".homePageLayout" />
+			<forward name="success" path=".addTasks"/>
+		</action> -->
+		
+		<!-- <action path="/tasks" name="taskForm" parameter="method"
+			input=".addTasks" validate="false">
+			<forward name="list" path=".tasks" />
+			<forward name="add" path=".addTasks" />
+			<forward name="edit" path=".addTasks" />
+			<forward name="view" path=".viewTasks" />
+			<forward name="failure" path=".homePageLayout" />
+		</action> -->
+		<action path="/saveTasks" name="taskForm" parameter="method"
+			input=".addTasks" validate="true">
+			<forward name="save" path=".addTasks" />
+		</action>
+		
+		<action path="/resources" name="resourceForm" parameter="method"
+			input=".addResources" validate="false">
+			<forward name="list" path=".resources" />
+			<forward name="add" path=".addResources" />
+			<forward name="edit" path=".addResources" />
+			<forward name="view" path=".viewResources" />
+			<forward name="failure" path=".homePageLayout" />
+		</action>
+		<action path="/saveResources" name="resourceForm" parameter="method"
+			input=".addResources" validate="true">
+			<forward name="save" path=".addResources" />
+		</action>
+		
+		<action path="/employeeprojectmapping" name="employeeprojectmappingForm"
+			parameter="method" input=".employeeprojectmapping" validate="false">
+			<forward name="getProjects" path=".employeeprojectmapping" />
+			<forward name="list" path=".employeeprojectmapping" />
+			<forward name="save" path=".employeeprojectmapping" />
+			<forward name="add" path=".addemployeeprojectmapping" />
+			<forward name="edit" path=".editemployeeprojectmapping" />
+			<forward name="view" path=".viewemployeeprojectmapping" />
+			<forward name="update" path=".employeeprojectmapping" />
+			<forward name="delete" path=".employeeprojectmapping" />
+			<forward name="failure" path=".homePageLayout" />
+		</action>
+
+		<action path="/leaveRequest" name="leaveRequestForm" parameter="method"
+			input=".addLeave" validate="false">
+			<forward name="list" path=".leave" />
+			<forward name="add" path=".addLeave" />
+			<forward name="edit" path=".addLeave" />
+			<forward name="view" path=".viewLeave" />
+			<forward name="failure" path=".homePageLayout" />
+		</action>
+
+		<action path="/saveLeaveRequest" name="leaveRequestForm"
+			parameter="method" input=".addLeave" validate="false">
+			<forward name="save" path=".addLeave" />
+		</action>
+
+
+		<action path="/leaveApproval" name="leaveRequestForm"
+			parameter="method" input=".addLeave" validate="false">
+			<forward name="list" path=".leaveApproval" />
+			<forward name="add" path=".addLeaveApproval" />
+			<forward name="edit" path=".addLeaveApproval" />
+			<forward name="view" path=".viewLeaveApproval" />
+			<forward name="failure" path=".homePageLayout" />
+		</action>
+
+
+		<action path="/requirement" name="requirementForm" parameter="method"
+			input=".addRequirement" validate="false">
+			<forward name="list" path=".requirement" />
+			<forward name="add" path=".addRequirement" />
+			<forward name="edit" path=".addRequirement" />
+			<forward name="view" path=".viewRequirement" />
+			<forward name="failure" path=".homePageLayout" />
+		</action>
+
+		<action path="/applicant" name="applicantForm" parameter="method"
+			input=".addApplicant" validate="false">	
+			<forward name="list" path="/pages/addApplicantRegister.jsp" />
+			<forward name="add" path=".addApplicant" />
+			<forward name="save" path="/pages/addApplicant.jsp" />
+			<forward name="edit" path="/pages/addApplicant.jsp" />
+			<forward name="view" path=".viewApplicant" />
+			<forward name="failure" path="/pages/addApplicant.jsp" />
+		</action>
+
+		<action path="/DownloadResume" name="applicantForm"
+			parameter="method" input=".addApplicant" validate="false">
+			<forward name="list" path=".addApplicant" />
+		</action>
+
+
+
+
+		<action path="/saveLeaveRequestApproval" name="leaveRequestForm"
+			parameter="method" input=".addLeaveApproval" validate="false">
+			<forward name="save" path=".addLeaveApproval" />
+		</action>
+
+		<action path="/saveRequirement" name="requirementForm"
+			parameter="method" input=".addRequirement" validate="false">
+			<forward name="save" path=".addRequirement" />
+		</action>
+
+		<action path="/saveApplicant" name="applicantForm" parameter="method"
+			input=".addApplicant" validate="false">
+			<forward name="save" path=".addApplicant" />
+		</action>
+
+		<action path="/jobSearch" name="requirementForm" parameter="method"
+			input=".addJobSearch" validate="false">
+			<forward name="list" path=".addJobSearch" />
+			<forward name="search" path=".addJobSearch" />
+		</action>
+
+		<action path="/employeesShift" name="employeeShiftTime"
+			parameter="method" input=".addEmployeeShift" validate="false">
+			<forward name="list" path=".employeeShift" />
+			<forward name="add" path=".addEmployeeShift" />
+			<forward name="edit" path=".addEmployeeShift" />
+			<forward name="view" path=".viewEmployeeShift" />
+			<forward name="delete" path=".deleteEmployees" />
+			<forward name="failure" path=".homePageLayout" />
+		</action>
+		<action path="/saveEmployeeShift" name="employeeShiftTime"
+			parameter="method" input=".addEmployeeShift" validate="false">
+			<forward name="save" path=".addEmployeeShift" />
+		</action>
+		
+		<action path="/menuAccess" name="roleAccessForm"
+			parameter="method" input=".addroleAccess" validate="false">
+			<forward name="list" path=".addroleAccess" />
+			<forward name="edit" path=".editroleAccess" />
+		</action>
+		
+		<action path="/menuAccessSave" name="roleAccessForm"
+			parameter="method" input=".systemRoles" validate="false">
+			<forward name="edit" path=".editroleAccess" />
+		</action>
+
+		<action path="/logout" name="emptyForm">
+			<forward name="success" path="/login.jsp" />
+		</action>
+		
+		
+		<action path="/applicantSearch" name="applicantForm" parameter="method"
+			input=".addApplicantSearch" validate="false">
+			<forward name="add" path=".addApplicantSearch" />
+		</action>
+		
+				
+		<action path="/saveApplicantRegister" name="applicantForm" parameter="method"
+			input=".addApplicant" validate="false">
+			<forward name="save" path="/pages/addApplicantRegister.jsp" />
+		</action>
+		
+		<action path="/updateApplicantRegister" name="applicantForm" parameter="method"
+			input=".addApplicant" validate="false">
+			<forward name="save" path=".addApplicant" />
+		</action>
+		
+		<action path="/applicantView" name="applicantForm" parameter="method"
+			input=".applicantView" validate="false">
+			<forward name="edit" path=".applicantView" />
+		</action>
+		<action path="/addNewItemNull" parameter=".addNewItem" type="org.apache.struts.actions.ForwardAction">
+		</action>
+		
+		<action path="/addNewItem" name="addNewItemForm" input=".addNewItem" validate="false">
+			<forward name="success" path=".addNewItem"/>
+		</action>
+		
+		
+	</action-mappings>
+	<!-- ============================================= Controller Configuration -->
+	<!-- This plugin is Rsupplied by the Spring framework for processing the 
+		struts actionServlet requests through tiles -->
+	<controller>
+		<set-property property="processorClass"
+			value="org.springframework.web.struts.DelegatingTilesRequestProcessor" />
+	</controller>
+
+	<!-- ======================================== Message Resources Definitions -->
+	<message-resources parameter="MessageResources" />
+	<!-- =============================================== Plug Ins Configuration -->
+	<!-- ======================================================= Tiles plugin -->
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+
+		<!-- Path to XML definition file -->
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+		<!-- Set Module-awareness to true -->
+		<set-property property="moduleAware" value="true" />
+	</plug-in>
+	<!-- =================================================== Validator plugin -->
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+	</plug-in>
+	<!-- =================================================== Spring framework 
+		plugin -->
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation" value="/WEB-INF/action-servlet.xml" />
+	</plug-in>
+
+</struts-config>

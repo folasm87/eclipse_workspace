@@ -1,0 +1,22 @@
+package net.mv.dao;
+
+import javax.persistence.*;
+
+import com.multivision.ehrms.business.Employee;
+import com.multivision.ehrms.business.Project;
+
+public class UserToProject {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="ID")
+	private long ID;
+	
+	@ManyToOne
+	@JoinColumn(name="emp_id", referencedColumnName="id")
+	private Employee employee = new Employee();
+	@ManyToOne
+	@JoinColumn(name="project_id", referencedColumnName="id")
+	private Project project = new Project();
+
+}

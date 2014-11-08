@@ -1,0 +1,8 @@
+package com.multivision.imm.action;
+
+import org.apache.struts.action.Action;
+
+public class AddNewItemAction extends Action {
+
+	BusDelegate bd;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert Data</title>
+</head>
+<body>
+
+	<form action="/add_record.html" method="post"> 
+	<fieldset>
+		<label for "studid">Student ID:</label>
+		<input type="text" name="studid"> <br/>
+		<label for "studname">Student Name:</label>
+		<input type="text" name="studname"> <br/>
+		<label for "dob">Date of Birth:</label>
+		<input type="text" name="dob"> <br/>
+		<label for "fees">Fees Due:</label>
+		<input type="number" name="fees"> <br/>
+		<input type="submit" name="submit" value="Submit">
+		</fieldset>
+	</form>
+
+</body>
+</html>

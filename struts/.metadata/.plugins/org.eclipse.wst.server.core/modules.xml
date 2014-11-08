@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.j2ee.server:StrutsDynaValidationProject" serverId="Oracle WebLogic Server 12c (12.1.2) at localhost [mydomain]"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:DispatchActionProject" serverId="Oracle WebLogic Server 12c (12.1.2) at localhost [mydomain]"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:SimpleStrutsProject" serverId="Oracle WebLogic Server 12c (12.1.2) at localhost [mydomain]"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:StrutsWithTiles" serverId="Oracle WebLogic Server 12c (12.1.2) at localhost [mydomain]"/>
+</modules>

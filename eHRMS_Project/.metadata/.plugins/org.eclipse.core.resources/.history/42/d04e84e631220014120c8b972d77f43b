@@ -1,0 +1,23 @@
+package com.multivision.ehrms.action.form;
+
+import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.multivision.ehrms.business.Project;
+
+public class TaskForm {
+
+	private long taskId;
+	
+	
+	
+	private String name;
+	
+	
+	private String duration;
+	
+	
+	
+	private Project project;
+}

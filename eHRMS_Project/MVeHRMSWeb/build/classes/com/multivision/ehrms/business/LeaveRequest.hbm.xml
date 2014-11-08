@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.multivision.ehrms.business.LeaveRequest" table="Leave_Request">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="fromDate" column="from_date" type="string" />
+		<property name="toDate" column="to_date" type="string" />
+		<many-to-one name="employee" column="emp_id"
+			class="com.multivision.ehrms.business.Employee" fetch="join" />
+		<property name="reason" column="reason" type="string" />
+		<property name="leaveType" column="leave_type" type="string" />
+		<property name="status" column="status" type="string" />
+		<property name="noOfDays" column="no_of_days" type="string" />
+				
+		
+	</class>
+</hibernate-mapping>

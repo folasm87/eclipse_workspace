@@ -1,0 +1,50 @@
+package net.mv.test;
+
+import net.mv.dao.Account;
+import net.mv.dao.HibernateUtility;
+
+import org.hibernate.Session;
+
+public class TestAccount {
+	
+	public static void openAccount(String holder, double balance){
+		Session session = null;
+		org.hibernate.Transaction hibTxn = null;
+		session = HibernateUtility.getSessionFactory().openSession();
+		hibTxn = session.getTransaction();
+		hibTxn.begin();
+		Account acnt = new Account(holder, balance);
+		session.save(acnt);
+		hibTxn.commit();
+		session.close();
+		
+	}
+	
+	public static void deposit(long acntNo, double amount){
+		
+		Session session = null;
+		org.hibernate.Transaction hibTxn = null;
+		session = HibernateUtility.getSessionFactory().openSession();
+		hibTxn = session.getTransaction();
+		hibTxn.begin();
+		
+		//acnt is a "handle" to the row in the db with account number = acctNo (passed in)
+		Account acnt = (Account) session.load(Account.class, acntNo);
+		
+		
+	}
+	
+	public static void withdraw(long acntNo, double amount){
+		
+	}
+	
+	public static void checkBalance(long acntNo, double amount){
+		
+	}
+
+	public static void main(String[] args) {
+		openAccount("Steve",  500.00);
+		openAccount("Marie",  3541.00);
+	}
+
+}

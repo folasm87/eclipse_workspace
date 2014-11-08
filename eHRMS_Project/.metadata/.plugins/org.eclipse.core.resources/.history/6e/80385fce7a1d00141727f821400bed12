@@ -1,0 +1,13 @@
+package com.multivision.imm.business;
+
+import com.multivision.imm.business.interfaces.IBusDelegate;
+
+public class BusDelegate implements IBusDelegate {
+
+	@Override
+	public void addItem(String[] str) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+}

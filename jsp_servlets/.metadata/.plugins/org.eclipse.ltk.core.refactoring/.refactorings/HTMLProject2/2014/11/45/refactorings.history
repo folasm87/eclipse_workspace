@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LoginServlet.java&apos; to &apos;FirstWebProject&apos;&#x0D;&#x0A;- Original project: &apos;HTMLProject2&apos;&#x0D;&#x0A;- Destination element: &apos;FirstWebProject&apos;&#x0D;&#x0A;- Original element: &apos;net.multivision.actions.LoginServlet.java&apos;" description="Copy compilation unit" destination="=FirstWebProject" element1="/src&lt;net.multivision.actions{LoginServlet.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1415019395274" units="1" version="1.0"/>
+</session>

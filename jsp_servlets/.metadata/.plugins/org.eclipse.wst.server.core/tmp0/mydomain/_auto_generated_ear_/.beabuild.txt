@@ -1,0 +1,6 @@
+C\:/eclipse_workspace/jsp_servlets/AjaxAssignment/WebContent = AjaxAssignment.war
+C\:/eclipse_workspace/jsp_servlets/.metadata/.plugins/org.eclipse.core.resources/AjaxAssignment/build/weboutput = AjaxAssignment.war
+C\:/eclipse_workspace/jsp_servlets/AjaxAssignment/build/classes = AjaxAssignment.war/WEB-INF/classes
+C\:/eclipse_workspace/jsp_servlets/JSTLTutorialProject/WebContent = JSTLTutorialProject.war
+C\:/eclipse_workspace/jsp_servlets/.metadata/.plugins/org.eclipse.core.resources/JSTLTutorialProject/build/weboutput = JSTLTutorialProject.war
+C\:/eclipse_workspace/jsp_servlets/JSTLTutorialProject/build/classes = JSTLTutorialProject.war/WEB-INF/classes

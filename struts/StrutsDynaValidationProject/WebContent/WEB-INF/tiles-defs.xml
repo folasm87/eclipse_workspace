@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+"http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<!--
+This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+
+	<!-- this is the template for the future pages -->
+	<definition name="myDefinition" path="/layout.jsp">
+		<put name="title" value="Welcome to Recipes.com!"/>
+		<put name="header" value="/header.jsp"/>
+		<put name="menu" value="/menu.jsp"/>
+		<put name="footer" value="/footer.jsp"/>
+		<put name="body" value="body"/>
+	</definition>
+	
+	
+	<!-- Create individual definitions for each -->
+	
+	<definition name=".landingDefinition" extends="myDefinition">
+		<put name="title" value="User Landing Page (Sign Up or Login)"/>
+		<put name="body" value="/landing.jsp"/>
+	</definition>
+	
+	<definition name=".mainDefinition" extends="myDefinition">
+		<put name="title" value="Main Page"/>
+		<put name="body" value="/main.jsp"/>
+	</definition>
+	 
+	<definition name=".loginDefinition" extends="myDefinition">
+		<put name="title" value="Login"/>
+		<put name="body" value="/login.jsp"/>
+	</definition>
+	<definition name=".registerDefinition" extends="myDefinition">
+		<put name="title" value="Registration Page"/>
+		<put name="body" value="/register.jsp"/>
+	</definition>
+	<definition name=".viewDefinition" extends="myDefinition">
+		<put name="title" value="View"/>
+		<put name="body" value="/view.jsp"/>
+	</definition>
+	<definition name=".insertDefinition" extends="myDefinition">
+		<put name="title" value="Insert"/>
+		<put name="body" value="/insert.jsp"/>
+	</definition>
+	<!--
+	<definition name="login" extends="myDefinition">
+		<put name="title" value="Login"/>
+		<put name="body" value="/login.jsp"/>
+	</definition>
+	<definition name="register" extends="myDefinition">
+		<put name="title" value="Registration Page"/>
+		<put name="body" value="/register.jsp"/>
+	</definition>
+	<definition name="view" extends="myDefinition">
+		<put name="title" value="View"/>
+		<put name="body" value="/view.jsp"/>
+	</definition>
+	<definition name="insert" extends="myDefinition">
+		<put name="title" value="Insert"/>
+		<put name="body" value="/insert.jsp"/>
+	</definition>
+	 -->
+<!-- sample tiles definitions
+<definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
+<put name="title" value="Sample Page Title" />
+<put name="header" value="/common/header.jsp" />
+<put name="menu" value=".mainMenu" />
+<put name="footer" value="/common/footer.jsp" />
+<put name="body" value=".portal.body" />
+</definition>
+
+<definition name=".mainMenu" path="/common/layouts/vboxLayout.jsp" >
+<putList name="list" >
+<add value=".menu.links" />
+<add value=".menu.taglib.references" />
+<add value=".menu.printer.friendly" />
+<add value=".menu.old.documents" />
+</putList>
+</definition>
+
+<definition name="aPage" extends=".mainLayout">
+<put name="title" value="Another Title" />
+<put name="body" value=".aPage.body" />
+</definition>
+
+end samples -->
+
+<definition name="${YOUR_DEFINITION_HERE}">
+</definition>
+
+</tiles-definitions>

@@ -1,0 +1,37 @@
+package com.multivision.ehrms.service.business;
+
+import java.util.List;
+
+import com.multivision.ehrms.business.Task;
+import com.multivision.ehrms.service.business.interfaces.ITaskBusinessService;
+import com.multivision.ehrms.service.data.DataServiceFactory;
+import com.multivision.ehrms.service.data.interfaces.ITaskDataService;
+
+public class TaskBusinessService implements ITaskBusinessService {
+
+	
+	public List<Task> getTasks() throws Exception {
+		DataServiceFactory dsFactory = DataServiceFactory.getInstance();
+		
+		ITaskDataService taskDataService = (ITaskDataService) dsFactory.getFactory().getBean("projectDS");
+		
+		return taskDataService.getTasks();
+	}
+
+	
+	public void saveTask(Task task) throws Exception {
+		DataServiceFactory dsFactory = DataServiceFactory.getInstance();
+		ITaskDataService taskDataService = (ITaskDataService) dsFactory.getFactory().getBean("projectDS");
+		taskDataService.saveTask(task);
+
+	}
+
+	
+	public Task getTask(Long Id) throws Exception {
+		DataServiceFactory dsFactory = DataServiceFactory.getInstance();
+		ITaskDataService taskDataService = (ITaskDataService) dsFactory.getFactory().getBean("projectDS");
+		return taskDataService.getTask(Id);
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package net.mv.dao;
+
+import javax.persistence.*;
+
+
+
+@Entity
+public class UserToProject {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="ID")
+	private long ID;
+	
+	@ManyToOne
+	@JoinColumn(name="user_id", referencedColumnName="ID")
+	private User user = new User();
+	@ManyToOne
+	@JoinColumn(name="project_id", referencedColumnName="ID")
+	private Project project = new Project();
+
+}

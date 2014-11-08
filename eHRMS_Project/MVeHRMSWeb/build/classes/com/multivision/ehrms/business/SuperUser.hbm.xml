@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.multivision.ehrms.business.SuperUser" table="Super_Users">
+		<id name="username" type="string">
+			<generator class="assigned" />
+		</id>
+		<property name="password" column="password" type="string" />
+		<many-to-one name="systemRole" column="role_id"
+			class="com.multivision.ehrms.business.SystemRole" fetch="join" />
+		<many-to-one name="employee" column="emp_id"
+			class="com.multivision.ehrms.business.Employee" fetch="join"
+			not-null="false" />
+		<many-to-one name="applicant" column="applicant_id"
+			class="com.multivision.ehrms.business.Applicant" fetch="join"
+			not-null="false" />
+	</class>
+</hibernate-mapping>

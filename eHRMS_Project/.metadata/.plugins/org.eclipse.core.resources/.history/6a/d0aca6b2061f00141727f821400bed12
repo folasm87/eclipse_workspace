@@ -1,0 +1,5 @@
+package com.multivision.ehrms.service.business.interfaces;
+
+public interface ITaskBusinessService {
+
+}

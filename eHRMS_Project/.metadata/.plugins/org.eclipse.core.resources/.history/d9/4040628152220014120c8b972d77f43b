@@ -1,0 +1,100 @@
+package com.multivision.ehrms.action.form;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.validator.ValidatorForm;
+
+import com.multivision.ehrms.business.Project;
+
+public class ResourceForm extends ValidatorForm {
+	
+	
+	private static final long serialVersionUID = 1L;
+
+	private long id;
+	
+	private String resourceId;
+	
+	private String name;
+	
+	private double cost;
+	
+	private Project project;
+	
+	private String action;
+	
+	public String getAction() {
+		return action;
+	}
+
+	public void setAction(String action) {
+		this.action = action;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getResourceId() {
+		return resourceId;
+	}
+
+	public void setTaskId(String taskId) {
+		this.resourceId = taskId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getCost() {
+		return cost;
+	}
+
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+
+	public Project getProject() {
+		return project;
+	}
+
+	public void setProject(Project project) {
+		this.project = project;
+	}
+	
+	public void reset(ActionMapping mapping, ServletRequest request) {
+
+	}
+	
+	public ActionErrors validate(ActionMapping mapping,
+			HttpServletRequest request) {
+		ActionErrors errors = new ActionErrors();
+		ActionMessage message;
+		if (this.resourceId == null || this.resourceId.trim().length() == 0) {
+			message = new ActionMessage("resource.id.mandatory");
+			errors.add("resourceId", message);
+		}
+		if (this.name == null || this.name.trim().length() == 0) {
+			message = new ActionMessage("task.name.mandatory");
+			errors.add("name", message);
+		}
+
+		return errors;
+	}
+	
+	
+
+}

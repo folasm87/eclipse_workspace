@@ -1,0 +1,14 @@
+package com.multivision.imm.service.data.interfaces;
+
+public interface IItemDataService {
+	
+	public Object insertItem(Item item) throws Exception;
+	public Object updateItem(Item item) throws Exception;
+	public void deleteItem(Item item) throws Exception;
+	public Object retrieveItem(Item item, String str) throws Exception;
+	public List retrieveAllItems(Item item) throws Exception;
+	public List searchItems(Item item) throws Exception;
+	public List retrieveAllItems(Item item) throws Exception;
+	
+
+}

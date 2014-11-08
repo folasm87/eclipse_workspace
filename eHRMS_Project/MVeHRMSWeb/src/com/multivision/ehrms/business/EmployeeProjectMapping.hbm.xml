@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.multivision.ehrms.business.EmployeeProjectMapping"
+		table="Employee_Project_Mapping">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="startDate" column="start_date" type="string" />
+		<property name="endDate" column="end_date" type="string" />
+		<many-to-one name="employee" column="emp_id"
+			class="com.multivision.ehrms.business.Employee" fetch="join" />
+		<many-to-one name="project" column="project_id"
+			class="com.multivision.ehrms.business.Project" fetch="join" />
+
+	</class>
+</hibernate-mapping>

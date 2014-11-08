@@ -1,0 +1,3 @@
+C\:/eclipse_workspace/eHRMS_Project/J-Project/WebContent = J-Project.war
+C\:/eclipse_workspace/eHRMS_Project/.metadata/.plugins/org.eclipse.core.resources/J-Project/build/weboutput = J-Project.war
+C\:/eclipse_workspace/eHRMS_Project/J-Project/build/classes = J-Project.war/WEB-INF/classes

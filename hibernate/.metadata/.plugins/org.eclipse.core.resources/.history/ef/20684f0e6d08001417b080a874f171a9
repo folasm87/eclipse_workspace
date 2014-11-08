@@ -1,0 +1,7 @@
+package net.mv.actions;
+
+import org.apache.struts.action.Action;
+
+public class LookupAction extends Action{
+
+}

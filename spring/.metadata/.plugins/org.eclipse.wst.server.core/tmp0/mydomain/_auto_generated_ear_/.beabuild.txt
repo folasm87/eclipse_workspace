@@ -1,0 +1,3 @@
+C\:/eclipse_workspace/spring/SpringMVCMinXml/WebContent = SpringMVCMinXml.war
+C\:/eclipse_workspace/spring/.metadata/.plugins/org.eclipse.core.resources/SpringMVCMinXml/build/weboutput = SpringMVCMinXml.war
+C\:/eclipse_workspace/spring/SpringMVCMinXml/build/classes = SpringMVCMinXml.war/WEB-INF/classes

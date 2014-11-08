@@ -1,0 +1,89 @@
+package com.multivision.ehrms.business;
+
+import java.io.Serializable;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="Resources")
+public class Resource implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue
+	@Column(name="resource_id")
+	private long resourceId;
+	
+	@Column
+	private String name;
+	
+	@Column
+	private double cost;
+	
+
+	
+	@ManyToOne
+	@JoinColumn(name="project_id", referencedColumnName="id")
+	private Project project_id;
+
+
+
+	public long getResourceId() {
+		return resourceId;
+	}
+
+
+	public void setResourceId(long resourceId) {
+		this.resourceId = resourceId;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public double getCost() {
+		return cost;
+	}
+
+
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+
+
+	public String getProject_name() {
+		return project_name;
+	}
+
+
+	public void setProject_name(String project_name) {
+		this.project_name = project_name;
+	}
+
+
+	public Project getProject_id() {
+		return project_id;
+	}
+
+
+	public void setProject_id(Project project_id) {
+		this.project_id = project_id;
+	}
+
+
+
+	
+	
+
+}

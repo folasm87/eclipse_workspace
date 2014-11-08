@@ -1,0 +1,302 @@
+package com.multivision.ehrms.action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.action.ActionMessages;
+
+import com.multivision.ehrms.action.form.TaskForm;
+import com.multivision.ehrms.business.Employee;
+import com.multivision.ehrms.business.Task;
+import com.multivision.ehrms.business.Project;
+import com.multivision.ehrms.exception.DataSourceConnectivityFailedException;
+import com.multivision.ehrms.exception.DuplicateRecordException;
+import com.multivision.ehrms.service.business.BusinessServiceFactory;
+import com.multivision.ehrms.service.business.interfaces.IEmployeeBusinessService;
+import com.multivision.ehrms.service.business.interfaces.ITaskBusinessService;
+import com.multivision.ehrms.service.business.interfaces.IProjectBusinessService;
+
+public class TaskAction extends BaseDispatchAction {
+	
+	private Logger logger = Logger.getRootLogger();
+	BusinessServiceFactory bsFactory;
+
+	public BusinessServiceFactory getBsFactory() {
+		return bsFactory;
+	}
+
+	public void setBsFactory(BusinessServiceFactory bsFactory) {
+		this.bsFactory = bsFactory;
+	}
+
+	@Override
+	protected ActionForward perform(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		ActionForward forward = null;
+		if (request.getParameter("method") != null) {
+			String parameter = request.getParameter("method");
+			if (parameter.equalsIgnoreCase("list")) {
+				forward = list(mapping, form, request, response);
+				logger.info("Forwarding List");
+			} else if (parameter.equalsIgnoreCase("add")) {
+				forward = add(mapping, form, request, response);
+				logger.info("Forwarding Add");
+			} else if (parameter.equalsIgnoreCase("save")) {
+				forward = save(mapping, form, request, response);
+				logger.info("Forwarding Save");
+			} else if (parameter.equalsIgnoreCase("edit")) {
+				forward = edit(mapping, form, request, response);
+				logger.info("Forwarding Edit");
+			} else if (parameter.equalsIgnoreCase("view")) {
+				forward = view(mapping, form, request, response);
+				logger.info("Forwarding View");
+			}
+		}
+		logger.info("Forwarding...");
+		return forward;
+	}
+	
+	public ActionForward list(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		logger.info("Listing task information");
+		ActionForward forward = null;
+		logger.info("Instantiated Action Forward");
+		List<Task> tasks = getTasks();
+		logger.info("Got TASKS");
+		request.setAttribute("TASKS", tasks);
+		logger.info("Set TASKS");
+		forward = mapping.findForward("list");
+		logger.info("Finished list function");
+		
+		return forward;
+	}
+
+	public ActionForward add(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		logger.info("Displaying add screen to add task details");
+		ActionForward forward = null;
+		logger.info("1");
+		TaskForm taskForm = (TaskForm) form;
+		logger.info("2");
+		taskForm.setAction("add");
+		logger.info("3");
+		clearFormValues(taskForm);
+		logger.info("4");
+		request.getSession(false).setAttribute("PROJECTS", fetchProjects());
+		request.getSession(false).setAttribute("EMPLOYEES", fetchEmployees());
+		logger.info("5");
+		forward = mapping.findForward("add");
+		logger.info("6");
+		return forward;
+	}
+
+	public ActionForward edit(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		logger.info("Displaying edit screen to edit task details");
+		ActionForward forward = null;
+		logger.info("display1");
+		TaskForm taskForm = (TaskForm) form;
+		logger.info("display2");
+		Long Id = null;
+		logger.info("display3");
+		if (request.getParameter("id") != null
+				&& request.getParameter("id").length() > 0) {
+			logger.info("display4");
+			Id = Long.valueOf(request.getParameter("id"));
+			logger.info("display5");
+		}
+		Task task = fetchTask(Id);
+		logger.info("display6");
+		request.getSession(false).setAttribute("PROJECTS", fetchProjects());
+		logger.info("display7");
+		request.getSession(false).setAttribute("EMPLOYEES", fetchEmployees());
+		logger.info("display8");
+		taskForm.setAction("edit");
+		logger.info("display9");
+		setFormValues(taskForm, task);
+		logger.info("display10");
+		forward = mapping.findForward("edit");
+		logger.info("display11");
+		return forward;
+	}
+
+	public ActionForward view(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		logger.info("Displaying view screen to display task details");
+		ActionForward forward = null;
+		logger.info("view1");
+		TaskForm taskForm = (TaskForm) form;
+		logger.info("view2");
+		Long Id = null;
+		logger.info("view3");
+		if (request.getParameter("id") != null
+				&& request.getParameter("id").length() > 0) {
+			logger.info("view4");
+			Id = Long.valueOf(request.getParameter("id"));
+			logger.info("view5");
+		}
+		logger.info("view6");
+		Task task = fetchTask(Id);
+		logger.info("view7");
+		setFormValues(taskForm, task);
+		forward = mapping.findForward("view");
+		return forward;
+	}
+
+	public ActionForward save(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		logger.info("Trying to save the task details");
+		ActionForward forward = null;
+		ActionMessages messages = new ActionMessages();
+		forward = mapping.findForward("save");
+		TaskForm taskForm = (TaskForm) form;
+		try {
+			saveValues(taskForm);
+			messages.add("task_add_status", new ActionMessage(
+					"task.data.added.success"));
+			saveMessages(request, messages);
+			taskForm.setAction("save");
+			logger.info("Saved the project details");
+		} catch (DataSourceConnectivityFailedException dscfException) {
+			logger.debug(dscfException);
+			messages.add("task_add_status", new ActionMessage(
+					"global.db.connectivity.failure"));
+			saveMessages(request, messages);
+		} catch (DuplicateRecordException drException) {
+			logger.debug(drException);
+			messages.add("task_add_status", new ActionMessage(
+					"task.data.added.duplicate.failed"));
+			saveMessages(request, messages);
+		} catch (Exception exception) {
+			logger.debug(exception);
+			messages.add("task_add_status",
+					new ActionMessage("task.data.added.general.failure",
+							exception.getMessage()));
+			saveMessages(request, messages);
+		}
+		return forward;
+	}
+
+	private List<Task> getTasks() throws Exception {
+		logger.info("Starting getTasks()");
+		List<Task> tasks = new ArrayList<Task>();
+		logger.info("ITaskBusinessService");
+		ITaskBusinessService projectService = (ITaskBusinessService) getBsFactory()
+				.getFactory().getBean("taskBS");
+		logger.info("getBSFactory ITaskBusinessService");
+		tasks = projectService.getTasks();
+		logger.info("Got tasks from ITaskBusinessService");
+		return tasks;
+	}
+
+	private void clearFormValues(TaskForm taskForm) {
+		logger.info("a");
+		taskForm.setName("");
+		logger.info("b");
+		taskForm.setEstimatedHours("");
+		logger.info("c");
+		taskForm.setTaskId(null);
+		logger.info("d");
+		taskForm.setProject(new Project());
+		//taskForm.getProject().setId(1L);
+		logger.info("e");
+		taskForm.setTaskHandler(new Employee());
+		//taskForm.getTaskHandler().setId(0L);
+		logger.info("f");
+		
+	}
+
+	private void setFormValues(TaskForm taskForm, Task task) {
+		taskForm.setId(task.getId());
+		taskForm.setName(task.getName());
+		taskForm.setTaskId(task.getTaskId());
+		taskForm.setEstimatedHours(task.getEstimatedHours());
+		taskForm.getProject().setId(
+				task.getProject().getId());
+		taskForm.getProject().setName(
+				task.getProject().getName());
+		
+		taskForm.getTaskHandler().setId(task.getTaskHandler().getId());
+		taskForm.getTaskHandler().setName(task.getTaskHandler().getName());
+	}
+
+	private void saveValues(TaskForm taskForm) throws Exception {
+		Task task = saveFormValues(taskForm);
+		logger.info("11");
+		ITaskBusinessService taskService = (ITaskBusinessService) getBsFactory()
+				.getFactory().getBean("taskBS");
+		logger.info("12");
+		taskService.saveTask(task);
+	}
+
+	private Task saveFormValues(TaskForm taskForm) throws Exception {
+		Task task = new Task();
+		logger.info("13");
+		if (!taskForm.getAction().equalsIgnoreCase("add")) {
+			task.setId(taskForm.getId());
+		}
+		logger.info("14");
+		task.setTaskId(taskForm.getTaskId());
+		logger.info("15");
+		task.setName(taskForm.getName());
+		logger.info("16");
+		task.setEstimatedHours(taskForm.getEstimatedHours());
+		logger.info("17");
+		task.setProject(taskForm.getProject());
+		/*task.getProject().setId(
+				taskForm.getProject().getId());*/
+		logger.info("18");
+		task.getProject().setId(
+				taskForm.getProject().getId());
+		logger.info("19a");
+		task.getProject().setName(
+				taskForm.getProject().getName());
+		logger.info("19b");
+		task.setTaskHandler(taskForm.getTaskHandler());
+		logger.info("19c");
+		task.getTaskHandler().setId(taskForm.getTaskHandler().getId());
+		logger.info("20");
+		task.getTaskHandler().setName(taskForm.getTaskHandler().getName());
+		logger.info("21");
+		return task;
+	}
+
+	private List<Project> fetchProjects() throws Exception {
+		List<Project> projects = new ArrayList<Project>();
+		IProjectBusinessService projectService = (IProjectBusinessService) getBsFactory()
+				.getFactory().getBean("projectBS");
+		projects = projectService.getProjects();
+		return projects;
+	}
+	
+	private List<Employee> fetchEmployees() throws Exception {
+		List<Employee> employees = new ArrayList<Employee>();
+		IEmployeeBusinessService employeeService = (IEmployeeBusinessService) getBsFactory()
+				.getFactory().getBean("employeeBS");
+		employees = employeeService.getEmployees();
+		return employees;
+	}
+
+	private Task fetchTask(Long Id) throws Exception {
+		Task task = null;
+		ITaskBusinessService taskService = (ITaskBusinessService) getBsFactory()
+				.getFactory().getBean("taskBS");
+		task = taskService.getTask(Id);
+		return task;
+	}
+
+}

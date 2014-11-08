@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.multivision.ehrms.business.EmployeeShiftTime" table="Employee_Shift_Time_Update">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="date" column="date$" type="string" />
+		<many-to-one name="employee" column="emp_id"
+			class="com.multivision.ehrms.business.Employee" fetch="join" />
+		<many-to-one name="project" column="project_id"
+			class="com.multivision.ehrms.business.Project" fetch="join" />
+		<property name="hours" column="hours" />
+		<property name="jobDone" column="job_done" type="string" />
+		<property name="remarks" column="remarks" type="string" />
+	</class>
+</hibernate-mapping>
